@@ -44,17 +44,37 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //attempt to fetch the data
+        attemptFetch()
+        
+        //setUp the user interface
+        self.setupView()
+        
         //set tableView delegate and datasource
         recipeTableView.delegate = self
         recipeTableView.delegate = self
+        
+        //add view controller as an observer so that when the app enters the background data is saved
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
     
     }
-
-    //MARK: - Notification Handling
     
     //MARK: - Navigation
     
-    //MARK: - Actions
+    //MARK: - Notification Handling
+    
+    //applicationDidEnterBackground is used to save the data when the application enters the background
+    
+    func applicationDidEnterBackground(_ notification: Notification) {
+        do {
+            try adManagedObjectContext.save()
+        } catch {
+            print("Unable to Save Changes")
+            print("\(error), \(error.localizedDescription)")
+        }
+        
+        print("Managed Object Context saved to persitent container")
+    }
     
     //MARK: - Helper Methods
     
@@ -117,7 +137,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Placeholder
-        return 0
+        guard let recipes = fetchedResultsController.fetchedObjects else { return 0 }
+        
+        return recipes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -130,12 +152,60 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         return cell
     }
     
+    //editing style enables the row to be deleted
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+
+        if editingStyle == .delete {
+            //fetch recipe
+            let recipe = fetchedResultsController.object(at: indexPath)
+            
+            //delete recipe
+            recipe.managedObjectContext?.delete(recipe)
+            
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
     
     //MARK: - NS Fetched Results Controller Delegate Functions
 
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        recipeTableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        recipeTableView.endUpdates()
+        
+        updateView()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch (type) {
+        case .insert:
+            if let indexPath = newIndexPath {
+                recipeTableView.insertRows(at: [indexPath], with: .fade)
+            }
+            break;
+        case .delete:
+            if let indexPath = indexPath {
+                recipeTableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        case.update:
+            if let indexPath = indexPath, let cell = recipeTableView.cellForRow(at: indexPath) as? RecipeCell {
+                configureRecipeCell(cell, at: indexPath)
+            }
+        case.move:
+            if let indexPath = indexPath {
+                recipeTableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            if let newIndexPath = newIndexPath {
+                recipeTableView.insertRows(at: [newIndexPath], with: .fade)
+            }
+        }
+    }
+    
     
 }
 
