@@ -8,6 +8,8 @@
 //  Backend based off tutorial from https://cocoacasts.com/populate-a-table-view-with-nsfetchedresultscontroller-and-swift-3/
 
 import UIKit
+//import Core Data
+import CoreData
 
 class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
