@@ -91,6 +91,11 @@
                                                 <constraint firstItem="NAk-la-W8q" firstAttribute="centerY" secondItem="ef9-wH-PQO" secondAttribute="centerY" id="sml-bP-YS0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recipeEmmissionsLbl" destination="xjH-rl-vGI" id="MGa-h0-jBf"/>
+                                            <outlet property="recipeEmojiImg" destination="NAk-la-W8q" id="u8h-X5-wLv"/>
+                                            <outlet property="recipeNameLbl" destination="hVf-29-arY" id="4h8-FV-nGg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

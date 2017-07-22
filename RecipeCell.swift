@@ -10,6 +10,18 @@ import UIKit
 
 class RecipeCell: UITableViewCell {
 
+    //MARK: - Reuse Identifier
+    
+    static let reuseIdentifier = "RecipeCell"
+    
+    //MARK: - Properties
+    
+    @IBOutlet weak var recipeNameLbl: UILabel!
+    @IBOutlet weak var recipeEmmissionsLbl: UILabel!
+    @IBOutlet weak var recipeEmojiImg: UIImageView!
+    
+    //MARK: - Initialisation 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
