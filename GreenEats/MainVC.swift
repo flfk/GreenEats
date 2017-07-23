@@ -87,7 +87,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
         
         recipeTableView.isHidden = !hasRecipes
-        print("Update View Function")
+        print("Update View Function - Recipe Table View")
     }
     
     //if there are no recipes display setup label

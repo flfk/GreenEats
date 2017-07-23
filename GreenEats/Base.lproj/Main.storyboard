@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="NAG-tj-rdb" customClass="RecipeCell" customModule="GreenEats" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="70" id="NAG-tj-rdb" customClass="RecipeCell" customModule="GreenEats" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NAG-tj-rdb" id="ef9-wH-PQO">
@@ -291,7 +291,7 @@
                                         <rect key="frame" x="0.0" y="50" width="300" height="224"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="13X-GT-T5G" customClass="SelectedIngredientCell" customModule="GreenEats" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectedIngredientCell" rowHeight="50" id="13X-GT-T5G" customClass="SelectedIngredientCell" customModule="GreenEats" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="300" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="13X-GT-T5G" id="nlH-CS-jgp">
@@ -417,6 +417,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ingredientsTableView" destination="cE9-66-jNl" id="a1K-ua-fP3"/>
                         <outlet property="recipeEmissionsLbl" destination="1Vf-rG-FMy" id="YfH-Jl-Uic"/>
                         <outlet property="recipeNameLbl" destination="fU0-mT-YVo" id="XF7-yh-kru"/>
                         <outlet property="recipeRatingImg" destination="THc-AX-0O0" id="DaM-rr-lmv"/>

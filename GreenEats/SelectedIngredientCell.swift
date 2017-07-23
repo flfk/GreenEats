@@ -10,6 +10,10 @@ import UIKit
 
 class SelectedIngredientCell: UITableViewCell {
 
+    //MARK: - Reuse Identifier
+    
+    static let reuseIdentifier = "SelectedIngredientCell"
+    
     //MARK: - Properties
     
     @IBOutlet weak var ingredientImg: UIImageView!
