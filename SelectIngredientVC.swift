@@ -10,6 +10,20 @@ import UIKit
 
 class SelectIngredientVC: UIViewController {
 
+    
+    //MARK: - Properties
+    
+    @IBOutlet weak var ingredientImg: UIImageView!
+    
+    @IBOutlet weak var ingredientNameLbl: UILabel!
+    
+    @IBOutlet weak var ingredientQuantityPicker: UIPickerView!
+    
+    @IBOutlet weak var ingredientRatingImg: UIImageView!
+    
+    @IBOutlet weak var ingredientEmissionsLbl: UILabel!
+    //MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

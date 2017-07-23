@@ -17,6 +17,8 @@
 		44FE53621F24298700C5296F /* AddRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE53611F24298700C5296F /* AddRecipeVC.swift */; };
 		44FE53651F2429A600C5296F /* AddIngredientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE53641F2429A600C5296F /* AddIngredientVC.swift */; };
 		44FE53671F2429B500C5296F /* SelectIngredientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE53661F2429B500C5296F /* SelectIngredientVC.swift */; };
+		44FE53691F242F2F00C5296F /* SelectedIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE53681F242F2F00C5296F /* SelectedIngredientCell.swift */; };
+		44FE536B1F242F3D00C5296F /* AddIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE536A1F242F3D00C5296F /* AddIngredientCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		44FE53611F24298700C5296F /* AddRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipeVC.swift; sourceTree = "<group>"; };
 		44FE53641F2429A600C5296F /* AddIngredientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIngredientVC.swift; sourceTree = "<group>"; };
 		44FE53661F2429B500C5296F /* SelectIngredientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectIngredientVC.swift; sourceTree = "<group>"; };
+		44FE53681F242F2F00C5296F /* SelectedIngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedIngredientCell.swift; sourceTree = "<group>"; };
+		44FE536A1F242F3D00C5296F /* AddIngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIngredientCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				44FE53471F233D9F00C5296F /* AppDelegate.swift */,
 				44FE53591F233F0A00C5296F /* Model */,
 				44FE535C1F2345FE00C5296F /* RecipeCell.swift */,
+				44FE53681F242F2F00C5296F /* SelectedIngredientCell.swift */,
+				44FE536A1F242F3D00C5296F /* AddIngredientCell.swift */,
 				44FE535E1F23529B00C5296F /* Recipes.xcdatamodeld */,
 				44FE535A1F233F1000C5296F /* View */,
 				44FE535B1F233F1500C5296F /* Controller */,
@@ -180,6 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44FE535D1F2345FE00C5296F /* RecipeCell.swift in Sources */,
+				44FE536B1F242F3D00C5296F /* AddIngredientCell.swift in Sources */,
+				44FE53691F242F2F00C5296F /* SelectedIngredientCell.swift in Sources */,
 				44FE53651F2429A600C5296F /* AddIngredientVC.swift in Sources */,
 				44FE534A1F233D9F00C5296F /* MainVC.swift in Sources */,
 				44FE53481F233D9F00C5296F /* AppDelegate.swift in Sources */,

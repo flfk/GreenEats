@@ -189,6 +189,9 @@
                                             <constraint firstAttribute="height" constant="16" id="nml-qL-T13"/>
                                         </constraints>
                                         <state key="normal" image="Plus Serving"/>
+                                        <connections>
+                                            <action selector="plusServingBtn:" destination="euW-k2-qLO" eventType="touchUpInside" id="aDb-YT-K81"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNg-iR-roL">
                                         <rect key="frame" x="188" y="44" width="16" height="16"/>
@@ -197,6 +200,9 @@
                                             <constraint firstAttribute="width" constant="16" id="fff-p1-RCr"/>
                                         </constraints>
                                         <state key="normal" image="Minus Serving"/>
+                                        <connections>
+                                            <action selector="minusServingBtn:" destination="euW-k2-qLO" eventType="touchUpInside" id="0us-F6-txd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
@@ -285,11 +291,11 @@
                                         <rect key="frame" x="0.0" y="50" width="300" height="224"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="13X-GT-T5G">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="13X-GT-T5G" customClass="SelectedIngredientCell" customModule="GreenEats" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="300" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="13X-GT-T5G" id="nlH-CS-jgp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="49.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 heads (300g)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsQ-uh-LUx">
@@ -363,6 +369,12 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.96862745100000003" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <outlet property="ingredientEmissionsLbl" destination="Oem-o0-DId" id="wkO-9u-RVN"/>
+                                                    <outlet property="ingredientImg" destination="dsC-zJ-zdM" id="ElS-VU-2kT"/>
+                                                    <outlet property="ingredientNameLbl" destination="tDS-jF-ma8" id="pRn-QC-EMX"/>
+                                                    <outlet property="ingredientQuantityLbl" destination="FsQ-uh-LUx" id="Qo1-CR-tCp"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -404,6 +416,12 @@
                             <constraint firstItem="uGG-lg-R6J" firstAttribute="top" secondItem="HZ4-Tu-ykS" secondAttribute="bottom" id="yJd-Jb-NEw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recipeEmissionsLbl" destination="1Vf-rG-FMy" id="YfH-Jl-Uic"/>
+                        <outlet property="recipeNameLbl" destination="fU0-mT-YVo" id="XF7-yh-kru"/>
+                        <outlet property="recipeRatingImg" destination="THc-AX-0O0" id="DaM-rr-lmv"/>
+                        <outlet property="servingSizeLbl" destination="Fd7-J2-7f4" id="jPp-4F-RDX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewf-UR-giG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -412,7 +430,7 @@
         <!--AddIngredientVC-->
         <scene sceneID="GxA-PK-s4S">
             <objects>
-                <viewController id="Vdh-ec-Btq" userLabel="AddIngredientVC" customClass="AddRecipeVC" customModule="GreenEats" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vdh-ec-Btq" userLabel="AddIngredientVC" customClass="AddIngredientVC" customModule="GreenEats" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mMw-r7-gbQ"/>
                         <viewControllerLayoutGuide type="bottom" id="dcb-BL-jsv"/>
@@ -432,11 +450,11 @@
                                 <rect key="frame" x="0.0" y="88" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="51" id="MBi-M6-M32">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="51" id="MBi-M6-M32" customClass="AddIngredientCell" customModule="GreenEats" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MBi-M6-M32" id="Eda-bo-aCL">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="broccoli" translatesAutoresizingMaskIntoConstraints="NO" id="ZAx-yP-dJN">
@@ -474,6 +492,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="ingredientImg" destination="ZAx-yP-dJN" id="IVy-TN-gwe"/>
+                                            <outlet property="ingredientNameLbl" destination="zO1-md-tgH" id="OVS-bg-ITy"/>
                                             <segue destination="sdc-WD-JPc" kind="show" id="L3D-fB-Jvs"/>
                                         </connections>
                                     </tableViewCell>
@@ -491,6 +511,10 @@
                             <constraint firstItem="dcb-BL-jsv" firstAttribute="top" secondItem="aZg-6c-rHb" secondAttribute="bottom" id="xcI-v7-iJd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ingredientSearchBar" destination="SpA-cu-r92" id="dLg-8z-gQH"/>
+                        <outlet property="ingredientTableView" destination="aZg-6c-rHb" id="ldC-gx-el7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eB6-SA-6UM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -611,6 +635,13 @@
                             <constraint firstItem="ztR-Gd-FeM" firstAttribute="leading" secondItem="HgA-At-84y" secondAttribute="leading" constant="10" id="wxZ-QS-GR3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ingredientEmissionsLbl" destination="TqN-f2-mfp" id="MuQ-1Z-nKG"/>
+                        <outlet property="ingredientImg" destination="Lhc-0P-snb" id="Jxt-Zp-dqi"/>
+                        <outlet property="ingredientNameLbl" destination="jX1-e7-f4i" id="DBB-aU-3de"/>
+                        <outlet property="ingredientQuantityPicker" destination="L5Z-aa-0dD" id="ebz-oy-hob"/>
+                        <outlet property="ingredientRatingImg" destination="aWD-IB-V58" id="4Hh-gw-JWn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHE-3W-yi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
