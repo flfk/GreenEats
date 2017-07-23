@@ -10,6 +10,10 @@ import UIKit
 
 class AddIngredientCell: UITableViewCell {
 
+    //MARK: - Reuse Identifier
+    
+    static let reuseIdentifier = "AddIngredientCell"
+    
     //MARK: - Properties
     
     @IBOutlet weak var ingredientImg: UIImageView!

@@ -451,7 +451,7 @@
                                 <rect key="frame" x="0.0" y="88" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="51" id="MBi-M6-M32" customClass="AddIngredientCell" customModule="GreenEats" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddIngredientCell" rowHeight="51" id="MBi-M6-M32" customClass="AddIngredientCell" customModule="GreenEats" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MBi-M6-M32" id="Eda-bo-aCL">
@@ -513,8 +513,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addIngredientTableView" destination="aZg-6c-rHb" id="b7Z-Y5-YXv"/>
                         <outlet property="ingredientSearchBar" destination="SpA-cu-r92" id="dLg-8z-gQH"/>
-                        <outlet property="ingredientTableView" destination="aZg-6c-rHb" id="ldC-gx-el7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eB6-SA-6UM" userLabel="First Responder" sceneMemberID="firstResponder"/>
