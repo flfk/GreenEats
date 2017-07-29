@@ -23,10 +23,18 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBOutlet weak var ingredientEmissionsLbl: UILabel!
     
+    //set initial value of ingredient to 0
+    var wholeNumbers:String?
+    var fraction:String?
+    var quantityType:String?
     
     //MARK: - Placeholder Quantity Data
     
-    let placeholderQuantity = [[1,2,3,4,5,6],[0,1/4,1/2,3/4],["each","grams"]]
+    let placeholderQuantity = [
+        [1,2,3,4,5,6],
+        [0,1/4,1/2,3/4],
+        ["each","grams"]
+    ]
     
     
     //MARK: - View Life Cycle
@@ -44,24 +52,39 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     //MARK: - Picker View Data Source and Delegate Protocol Functions
     
     
-    //----------CHECK OUT THIS TUTORIAL https://www.youtube.com/watch?v=6Qd3CdWYeJ8 ---------------------
+    //----------CHECK OUT THIS TUTORIAL https://www.youtube.com/watch?v=cGLtaRLb64g ---------------------
     
+    //return the count of components required based on data array
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return placeholderQuantity.count
     }
     
+    //count the number of rows required per component based on data array
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
       
         return placeholderQuantity[component].count
         
     }
     
+    //return the string for each required component row
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(placeholderQuantity[component])"
+        return "\(placeholderQuantity[component][row])"
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        return
+        print("\(component)")
+        print("\(row)")
+        
+        //use a switch statement to identify component that was selected
+        switch(component) {
+        case 0:
+            wholeNumbers = "\(placeholderQuantity[component][row])"
+        case 1:
+            fraction = "\(placeholderQuantity[component][row])"
+        case 2:
+            quantityType = "\(placeholderQuantity[component][row])"
+        default:break
+        }
     }
 
 }

@@ -30,10 +30,8 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         addIngredientTableView.dataSource = self
         addIngredientTableView.delegate = self
        
-        //add data to ingredientsArray
-        let broccoliData = IngredientClass(ingredientName: "Broccoli", ingredientIcon: "broccoli")
-        
-        ingredientsArray.append(broccoliData)
+        //get data from the IngredientData class containing ingredient data
+        ingredientsArray = Data.getData()
         
     }
 
