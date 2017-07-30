@@ -18,6 +18,10 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var ingredientSearchBar: UISearchBar!
     @IBOutlet weak var addIngredientTableView: UITableView!
     
+    var recipe: Recipe?
+    
+    private let segueSelectIngredient = "SelectIngredientSegue"
+    
     //create an array to store the data
     var ingredientsArray = [IngredientClass]()
     
@@ -32,6 +36,20 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
        
         //get data from the IngredientData class containing ingredient data
         ingredientsArray = Data.getData()
+        
+    }
+    
+    //MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationViewController = segue.destination as? SelectIngredientVC else {return}
+        
+        //pass the ingredient at the selected row to the SelectIngredientVC
+        let indexPath = addIngredientTableView.indexPathForSelectedRow!
+        let ingredient = ingredientsArray[indexPath.row]
+        destinationViewController.ingredient = ingredient
+        
+        addIngredientTableView.deselectRow(at: indexPath, animated: true)
         
     }
 

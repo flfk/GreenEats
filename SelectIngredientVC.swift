@@ -14,14 +14,13 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     //MARK: - Properties
     
     @IBOutlet weak var ingredientImg: UIImageView!
-    
     @IBOutlet weak var ingredientNameLbl: UILabel!
-    
     @IBOutlet weak var ingredientQuantityPicker: UIPickerView!
-    
     @IBOutlet weak var ingredientRatingImg: UIImageView!
-    
     @IBOutlet weak var ingredientEmissionsLbl: UILabel!
+    
+    var ingredient: IngredientClass!
+    var recipe: Recipe?
     
     //set initial value of ingredient to 0
     var wholeNumbers:String?
@@ -45,9 +44,18 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         //set picker view delegate and datasource to self
         ingredientQuantityPicker.delegate = self
         ingredientQuantityPicker.dataSource = self
+        
+        ingredientNameLbl.text = ingredient?.ingredientName
+        ingredientImg.image = UIImage(named: (ingredient?.ingredientIcon)!)
 
        
     }
+    
+    //MARK: - Actions
+    
+    @IBAction func AddIngredientBtn(_ sender: Any) {
+    }
+    
     
     //MARK: - Picker View Data Source and Delegate Protocol Functions
     

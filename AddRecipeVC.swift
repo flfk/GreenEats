@@ -70,6 +70,13 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     //MARK: - Navigation
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationViewController = segue.destination as? AddIngredientVC else { return }
+        
+        destinationViewController = recipe
+        
+    }
+    
     //MARK: - Notification Handling
     
     //applicationDidEnterBackground is used to save the data when the application enters the background

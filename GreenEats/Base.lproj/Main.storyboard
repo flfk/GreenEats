@@ -495,7 +495,7 @@
                                         <connections>
                                             <outlet property="ingredientImg" destination="ZAx-yP-dJN" id="IVy-TN-gwe"/>
                                             <outlet property="ingredientNameLbl" destination="zO1-md-tgH" id="OVS-bg-ITy"/>
-                                            <segue destination="sdc-WD-JPc" kind="show" id="L3D-fB-Jvs"/>
+                                            <segue destination="sdc-WD-JPc" kind="show" identifier="SelectIngredientSegue" id="L3D-fB-Jvs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -622,15 +622,32 @@
                                     <constraint firstAttribute="trailing" secondItem="TqN-f2-mfp" secondAttribute="trailing" constant="50" id="q9Y-99-Kam"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rs-Dw-CaH">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <color key="backgroundColor" red="0.42352941179999998" green="0.81960784310000001" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JQD-6o-tJz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Ingredient">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddIngredientBtn:" destination="sdc-WD-JPc" eventType="touchUpInside" id="Wem-yW-Ewa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="EAv-qD-vVI" firstAttribute="top" secondItem="TUS-Wj-IaI" secondAttribute="bottom" constant="10" id="7dL-kd-0FF"/>
+                            <constraint firstAttribute="trailing" secondItem="4Rs-Dw-CaH" secondAttribute="trailing" id="BYQ-dT-6SE"/>
                             <constraint firstItem="ztR-Gd-FeM" firstAttribute="top" secondItem="EAv-qD-vVI" secondAttribute="bottom" constant="10" id="Eeq-ZD-rhD"/>
                             <constraint firstAttribute="trailing" secondItem="EAv-qD-vVI" secondAttribute="trailing" constant="10" id="Htr-XL-XWE"/>
                             <constraint firstAttribute="trailing" secondItem="ztR-Gd-FeM" secondAttribute="trailing" constant="10" id="JQa-hz-jmk"/>
+                            <constraint firstItem="kfy-4J-wpL" firstAttribute="top" secondItem="4Rs-Dw-CaH" secondAttribute="bottom" id="ZjN-0C-PZe"/>
                             <constraint firstItem="TUS-Wj-IaI" firstAttribute="top" secondItem="dya-Jf-Yhq" secondAttribute="bottom" constant="10" id="nZo-S9-5HQ"/>
                             <constraint firstAttribute="trailing" secondItem="TUS-Wj-IaI" secondAttribute="trailing" constant="10" id="nxI-mR-z9k"/>
+                            <constraint firstItem="4Rs-Dw-CaH" firstAttribute="leading" secondItem="HgA-At-84y" secondAttribute="leading" id="nzC-Fl-Vne"/>
                             <constraint firstItem="EAv-qD-vVI" firstAttribute="leading" secondItem="HgA-At-84y" secondAttribute="leading" constant="10" id="q3f-bO-PtV"/>
                             <constraint firstItem="TUS-Wj-IaI" firstAttribute="leading" secondItem="HgA-At-84y" secondAttribute="leading" constant="10" id="rfX-xk-fWG"/>
                             <constraint firstItem="ztR-Gd-FeM" firstAttribute="leading" secondItem="HgA-At-84y" secondAttribute="leading" constant="10" id="wxZ-QS-GR3"/>
