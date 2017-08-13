@@ -35,6 +35,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         //configure fetch request
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         
+        //predicate fetch request for project
+        fetchRequest.predicate = NSPredicate(format: "recipe.createdAt == %@", self.recipe!.createdAt!)
+        
         //create fetch request controller
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: adManagedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -43,6 +46,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         return fetchedResultsController
     }()
+    
     
     //MARK: - View Life Cycle
     
@@ -67,6 +71,10 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         //TEST recipe passsed through segue
         print(recipe?.createdAt)
+        
+        let ingredients = recipe?.ingredients
+        //TEST
+        print("ingredients count is" + "\(ingredients?.count)")
         
     }
     
@@ -118,7 +126,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     fileprivate func updateView() {
         var hasIngredients = false
         
-        if let ingredients = fetchedResultsController.fetchedObjects {
+        if let ingredients = recipe?.ingredients {
             hasIngredients = ingredients.count > 0
         }
         
@@ -146,7 +154,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         print("configuring selected ingredients cell")
         
         //fetch ingredient
-        let ingredient = fetchedResultsController.object(at: indexPath)
+        let ingredient = fetchedResultsController.object(at: indexPath as IndexPath)
         
         //configure cell contents
         //XX PLACEHOLDER
@@ -173,18 +181,25 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     //MARK: - Table View DataSource Protocol Functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //Placeholder
-        guard let ingredients = fetchedResultsController.fetchedObjects else { return 0 }
+       
+        guard let ingredients = recipe?.ingredients else { return 0 }
+        
+        //TEST
+        print("ingredients count is" + "\(ingredients.count)")
         
         return ingredients.count
+        
     }
-    
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = ingredientsTableView.dequeueReusableCell(withIdentifier: SelectedIngredientCell.reuseIdentifier, for: indexPath) as? SelectedIngredientCell
             else {
                 fatalError("Unexpected Index Path")
         }
+        
+        print("Configure cell should be called in cell for row at")
+        configureIngredientCell(cell, at: indexPath)
         
         return cell
     }

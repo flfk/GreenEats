@@ -60,6 +60,7 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let newIngredient = Ingredient(context: adManagedObjectContext)
         
         //configure ingredient
+        newIngredient.name = ingredient.ingredientName
         newIngredient.emissions = 1
         newIngredient.grams = 1
         newIngredient.icon = ingredient.ingredientIcon
