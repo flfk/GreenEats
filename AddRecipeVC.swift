@@ -60,7 +60,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         self.setupView()
         
         //set tableView delegate and datasource
-        ingredientsTableView.delegate = self
+        ingredientsTableView.dataSource = self
         ingredientsTableView.delegate = self
         
         //add view controller as an observer so that when the app enters the background data is saved
