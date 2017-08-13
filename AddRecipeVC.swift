@@ -157,10 +157,11 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         let ingredient = fetchedResultsController.object(at: indexPath as IndexPath)
         
         //configure cell contents
-        //XX PLACEHOLDER
         cell.ingredientNameLbl.text = ingredient.name
-        cell.ingredientQuantityLbl.text = ingredient.quantity
-        cell.ingredientEmissionsLbl.text = "\(ingredient.emissions)"
+        let roundedIngredientQuantity = (ingredient.quantity * 100).rounded() / 100
+        cell.ingredientQuantityLbl.text = "\(roundedIngredientQuantity)" + " " + "\(ingredient.quantityName!)"
+        let roundedEmissions = round(ingredient.emissions)
+        cell.ingredientEmissionsLbl.text = "\(roundedEmissions)"
         cell.ingredientImg.image = UIImage(named: ingredient.icon!)
     }
     
