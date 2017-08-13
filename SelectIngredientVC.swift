@@ -77,8 +77,6 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("\(component)")
-        print("\(row)")
         
         //use a switch statement to identify component that was selected
         switch(component) {

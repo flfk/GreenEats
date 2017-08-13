@@ -21,6 +21,8 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     @IBOutlet weak var recipeEmissionsLbl: UILabel!
     @IBOutlet weak var ingredientsTableView: UITableView!
     
+    var servingSize = 1
+    
     //MARK: - Core Data Stack Properties
     
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Ingredient> = {
@@ -58,14 +60,26 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         //add view controller as an observer so that when the app enters the background data is saved
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
         
+        //set the serving size label
+        servingSizeLbl.text = "\(servingSize)"
+        
     }
     
     //MARK: - Actions
 
     @IBAction func minusServingBtn(_ sender: Any) {
+        
+        if servingSize == 1 {
+            return
+        } else {
+            servingSize = servingSize - 1
+            servingSizeLbl.text = "\(servingSize)"
+        }
     }
 
     @IBAction func plusServingBtn(_ sender: Any) {
+        servingSize = servingSize + 1
+        servingSizeLbl.text = "\(servingSize)"
     }
     
     //MARK: - Navigation
@@ -73,7 +87,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationViewController = segue.destination as? AddIngredientVC else { return }
         
-        destinationViewController = recipe
+        //destinationViewController = recipe
         
     }
     
