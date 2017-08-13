@@ -9,6 +9,7 @@
         <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="ingredients" inverseEntity="Recipe" syncable="YES"/>
     </entity>
     <entity name="Recipe" representedClassName="Recipe" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="emissions" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,6 +18,6 @@
     </entity>
     <elements>
         <element name="Ingredient" positionX="-54" positionY="18" width="128" height="135"/>
-        <element name="Recipe" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="Recipe" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

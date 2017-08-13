@@ -35,7 +35,6 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         ["each","grams","kilograms"]
     ]
     
-    
     //MARK: - View Life Cycle
     
     override func viewDidLoad() {
@@ -47,6 +46,9 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         
         ingredientNameLbl.text = ingredient?.ingredientName
         ingredientImg.image = UIImage(named: (ingredient?.ingredientIcon)!)
+        
+        //TEST recipe passsed through segue
+        print("\(recipe)")
 
        
     }
@@ -54,6 +56,25 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     //MARK: - Actions
     
     @IBAction func AddIngredientBtn(_ sender: Any) {
+        //create ingredient instance
+        let newIngredient = Ingredient(context: adManagedObjectContext)
+        
+        //configure ingredient
+        newIngredient.emissions = 1
+        newIngredient.grams = 1
+        newIngredient.icon = ingredient.ingredientIcon
+        newIngredient.quantity = "quantity placeholder"
+
+        //set relationship
+        newIngredient.recipe = recipe
+        
+        //TEST recipe created
+        print("\(newIngredient)")
+        
+        //pop view controller back to AddRecipe VC
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
+        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true);
+        
     }
     
     

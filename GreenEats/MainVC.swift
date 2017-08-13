@@ -18,6 +18,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     @IBOutlet weak var recipeTableView: UITableView!
     
+    var newRecipe: Recipe?
+    
+    private let segueAddRecipe = "AddRecipeSegue"
+    
     //MARK: - Core Data Stack Properties
     
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Recipe> = {
@@ -60,6 +64,21 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     }
     
     //MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationViewController = segue.destination as? AddRecipeVC else { return }
+        
+        if segue.identifier == segueAddRecipe {
+            
+            //create the recipe data instance
+            let newRecipe = Recipe(context: adManagedObjectContext)
+            //configure the newRecipe creation date
+            newRecipe.createdAt = "\(Date())"
+            //send the new recipe to the AddRecipe view controller
+            destinationViewController.recipe = newRecipe
+        }
+       
+    }
     
     //MARK: - Notification Handling
     

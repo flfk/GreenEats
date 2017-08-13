@@ -23,6 +23,8 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     var servingSize = 1
     
+    var recipe: Recipe?
+    
     //MARK: - Core Data Stack Properties
     
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Ingredient> = {
@@ -63,6 +65,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         //set the serving size label
         servingSizeLbl.text = "\(servingSize)"
         
+        //TEST recipe passsed through segue
+        print(recipe?.createdAt)
+        
     }
     
     //MARK: - Actions
@@ -86,6 +91,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationViewController = segue.destination as? AddIngredientVC else { return }
+        destinationViewController.recipe = recipe
         
         //destinationViewController = recipe
         

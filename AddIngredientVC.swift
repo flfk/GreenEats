@@ -37,6 +37,9 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         //get data from the IngredientData class containing ingredient data
         ingredientsArray = Data.getData()
         
+        //TEST recipe passsed through segue
+        print(recipe?.createdAt)
+        
     }
     
     //MARK: - Navigation
@@ -48,6 +51,7 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         let indexPath = addIngredientTableView.indexPathForSelectedRow!
         let ingredient = ingredientsArray[indexPath.row]
         destinationViewController.ingredient = ingredient
+        destinationViewController.recipe = recipe
         
         addIngredientTableView.deselectRow(at: indexPath, animated: true)
         
