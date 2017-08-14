@@ -124,6 +124,8 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     //UpdateView updates the user interface
     fileprivate func updateView() {
+        
+        //hide tableView if no ingredients added
         var hasIngredients = false
         
         if let ingredients = recipe?.ingredients {
@@ -132,6 +134,10 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         ingredientsTableView.isHidden = !hasIngredients
         print("Update View Function - Ingredients Table View")
+        
+        //update the emissions label
+        let roundedRecipeEmissions = Int(calculateRecipeEmissions())
+        recipeEmissionsLbl.text = "\(roundedRecipeEmissions)"
     }
     
     //if there are no ingredients display setup label
@@ -160,7 +166,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         cell.ingredientNameLbl.text = ingredient.name
         let roundedIngredientQuantity = (ingredient.quantity * 100).rounded() / 100
         cell.ingredientQuantityLbl.text = "\(roundedIngredientQuantity)" + " " + "\(ingredient.quantityName!)"
-        let roundedEmissions = round(ingredient.emissions)
+        let roundedEmissions = Int(ingredient.emissions)
         cell.ingredientEmissionsLbl.text = "\(roundedEmissions)"
         cell.ingredientImg.image = UIImage(named: ingredient.icon!)
     }
@@ -179,14 +185,25 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
     }
     
+    fileprivate func calculateRecipeEmissions() -> Double {
+        
+        var recipeEmissions = 0.00
+        
+        let ingredientEmissions = recipe?.ingredients as! Set<Ingredient>
+        
+        for i in ingredientEmissions {
+            recipeEmissions = recipeEmissions + i.emissions
+                
+        }
+        
+        return recipeEmissions
+    }
+    
     //MARK: - Table View DataSource Protocol Functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         guard let ingredients = recipe?.ingredients else { return 0 }
-        
-        //TEST
-        print("ingredients count is" + "\(ingredients.count)")
         
         return ingredients.count
         

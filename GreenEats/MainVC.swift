@@ -99,6 +99,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     //UpdateView updates the user interface
     fileprivate func updateView() {
+
         var hasRecipes = false
         
         if let recipes = fetchedResultsController.fetchedObjects {

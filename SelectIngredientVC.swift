@@ -51,55 +51,19 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBAction func AddIngredientBtn(_ sender: Any) {
         
-        //grams calculation
-        var kgSelected = 0.00
-        
-            //quantity selected in pickerView
-    
-            let integerSelected = Double(ingredientQuantityPicker.selectedRow(inComponent: 0))
-            
-            var fractionSelected = 0.00
-            let rowFractionSelected = ingredientQuantityPicker.selectedRow(inComponent: 1)
-            if rowFractionSelected == 0 {
-                fractionSelected = 0.00
-            } else if rowFractionSelected == 1 {
-                fractionSelected = 1 / 4
-            } else if rowFractionSelected == 2 {
-                fractionSelected = 1 / 3
-            } else if rowFractionSelected == 3 {
-                fractionSelected = 1 / 2
-            } else if rowFractionSelected == 4 {
-                fractionSelected = 2 / 3
-            } else if rowFractionSelected == 5 {
-                fractionSelected = 3 / 4
-            }
-        
-        let quantitySelected = integerSelected + fractionSelected
+        //calculate quantitySelected, kgSelected and emissions in grams through helper methods
+        let quantitySelected = selectedQuantity()
+        let kgSelected = selectedKilograms()
+        let gramsEmitted = calculateInEmissions()
         
         let quantityComponentRow = ingredientQuantityPicker.selectedRow(inComponent: 2)
-        if quantityComponentRow == 0 {
-            //quantity selected
-            kgSelected = Double(ingredient.standardPortionSizeKg) * quantitySelected
-            
-        } else if quantityComponentRow == 1 {
-            //grams selected
-            kgSelected = quantitySelected / 1000
-            
-        } else {
-            //kg selected
-            kgSelected = quantitySelected
-            
-        }
-        
-        //emissions calculation
-        let emissionsGrams = kgSelected * ingredient.emissionsPerKg * 1000
         
         //create ingredient instance
         let newIngredient = Ingredient(context: adManagedObjectContext)
         
         //configure ingredient
         newIngredient.name = ingredient.ingredientName
-        newIngredient.emissions = emissionsGrams
+        newIngredient.emissions = gramsEmitted
         newIngredient.kilograms = kgSelected
         newIngredient.icon = ingredient.ingredientIcon
         newIngredient.quantityName = quantityOptionsArray[2][quantityComponentRow]
@@ -139,22 +103,83 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
+        //update the gramsEmittedLabel
+        let gramsEmitted = calculateInEmissions()
+        let roundedGramsEmitted = Int(gramsEmitted)
+        ingredientEmissionsLbl.text = "\(roundedGramsEmitted)"
+        
+        
         //use a switch statement to identify component that was selected
-        switch(component) {
-        case 0:
-            wholeNumbers = quantityOptionsArray[component][row]
-        case 1:
-            fraction = quantityOptionsArray[component][row]
-        case 2:
-            quantityType = quantityOptionsArray[component][row]
-        default:break
-        }
+//        switch(component) {
+//        case 0:
+//            wholeNumbers = quantityOptionsArray[component][row]
+//        case 1:
+//            fraction = quantityOptionsArray[component][row]
+//        case 2:
+//            quantityType = quantityOptionsArray[component][row]
+//        default:break
+//        }
+        
     }
     
     //MARK: - Helper Methods
     
-    fileprivate func selectedKilograms() {
+    fileprivate func selectedQuantity() -> Double {
+        let integerSelected = Double(ingredientQuantityPicker.selectedRow(inComponent: 0))
         
+        var fractionSelected = 0.00
+        let rowFractionSelected = ingredientQuantityPicker.selectedRow(inComponent: 1)
+        if rowFractionSelected == 0 {
+            fractionSelected = 0.00
+        } else if rowFractionSelected == 1 {
+            fractionSelected = 1 / 4
+        } else if rowFractionSelected == 2 {
+            fractionSelected = 1 / 3
+        } else if rowFractionSelected == 3 {
+            fractionSelected = 1 / 2
+        } else if rowFractionSelected == 4 {
+            fractionSelected = 2 / 3
+        } else if rowFractionSelected == 5 {
+            fractionSelected = 3 / 4
+        }
+        
+        let quantitySelected = integerSelected + fractionSelected
+        
+        return quantitySelected
+    }
+    
+    fileprivate func selectedKilograms() -> Double {
+        
+        let quantitySelected = selectedQuantity()
+        
+        var kgSelected = 0.00
+        
+        let quantityComponentRow = ingredientQuantityPicker.selectedRow(inComponent: 2)
+        if quantityComponentRow == 0 {
+            //quantity selected
+            kgSelected = Double(ingredient.standardPortionSizeKg) * quantitySelected
+            
+        } else if quantityComponentRow == 1 {
+            //grams selected
+            kgSelected = quantitySelected / 1000
+            
+        } else {
+            //kg selected
+            kgSelected = quantitySelected
+            
+        }
+        
+        return kgSelected
+
+    }
+    
+    fileprivate func calculateInEmissions() -> Double {
+        
+        let kgSelected = selectedKilograms()
+        
+        let emissionsInGrams = kgSelected * ingredient.emissionsPerKg * 1000
+        
+        return emissionsInGrams
     }
     
     fileprivate func setUpQuantityOptionsArray() {

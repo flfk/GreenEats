@@ -37,9 +37,6 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         //get data from the IngredientData class containing ingredient data
         ingredientsArray = Data.getData()
         
-        //TEST recipe passsed through segue
-        print(recipe?.createdAt)
-        
     }
     
     //MARK: - Navigation
