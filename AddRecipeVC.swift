@@ -107,6 +107,27 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
     }
     
+    @IBAction func saveRecipeBtn(_ sender: Any) {
+        
+        //test if recipe name textfield is empty
+        if recipeNameTxtFld.text != "" {
+            
+            //configure recipe
+            recipe?.name = recipeNameTxtFld.text
+            recipe?.emissions = calculateRecipeEmissions()
+            recipe?.servings = Double(servingSize)
+            recipe?.rating = "Placeholder"
+            
+            //Pop view controller
+            _ = navigationController?.popViewController(animated: true)
+
+        } else {
+            emptyTextfieldAlert(title: "", message: "Please enter recipe name")
+        }
+    
+    }
+
+
     //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -208,6 +229,15 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         let emissionsPerServe = recipeEmissions / Double(servingSize)
         
         return emissionsPerServe
+    }
+    
+    func emptyTextfieldAlert (title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in alert.dismiss(animated: true, completion: nil)} ))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     //MARK: - Table View DataSource Protocol Functions

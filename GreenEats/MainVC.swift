@@ -135,7 +135,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         //configure cell contents
         //XX PLACEHOLDER
         cell.recipeNameLbl.text = recipe.name
-        cell.recipeEmmissionsLbl.text = "\(recipe.emissions)"
+        cell.recipeEmmissionsLbl.text = "\(Int(recipe.emissions))"
         cell.recipeEmojiImg.image = UIImage(named: recipe.rating!)
     }
     
