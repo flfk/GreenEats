@@ -72,9 +72,6 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         //set relationship
         newIngredient.recipe = recipe
         
-        //TEST recipe created
-        print("\(newIngredient)")
-        
         //pop view controller back to AddRecipe VC
         let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
         self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true);

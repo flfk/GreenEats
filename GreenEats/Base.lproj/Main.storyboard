@@ -173,10 +173,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fd7-J2-7f4">
-                                        <rect key="frame" x="197" y="44" width="15" height="16"/>
+                                        <rect key="frame" x="196" y="44" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="63V-7Y-d1w"/>
-                                            <constraint firstAttribute="width" constant="15" id="N5b-vh-Qx5"/>
+                                            <constraint firstAttribute="width" constant="16" id="N5b-vh-Qx5"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -194,7 +194,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNg-iR-roL">
-                                        <rect key="frame" x="176" y="44" width="16" height="16"/>
+                                        <rect key="frame" x="175" y="44" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="8oG-JE-GZf"/>
                                             <constraint firstAttribute="width" constant="16" id="fff-p1-RCr"/>

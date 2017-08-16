@@ -69,13 +69,6 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         //set the serving size label
         servingSizeLbl.text = "\(servingSize)"
         
-        //TEST recipe passsed through segue
-        print(recipe?.createdAt)
-        
-        let ingredients = recipe?.ingredients
-        //TEST
-        print("ingredients count is" + "\(ingredients?.count)")
-        
     }
     
     //MARK: - Actions
@@ -87,12 +80,24 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         } else {
             servingSize = servingSize - 1
             servingSizeLbl.text = "\(servingSize)"
+            
+            updateView()
         }
+        
+        
     }
 
     @IBAction func plusServingBtn(_ sender: Any) {
-        servingSize = servingSize + 1
-        servingSizeLbl.text = "\(servingSize)"
+        
+        if servingSize == 19 {
+            return
+        } else {
+            servingSize = servingSize + 1
+            servingSizeLbl.text = "\(servingSize)"
+            
+            updateView()
+        }
+        
     }
     
     //MARK: - Navigation
@@ -156,9 +161,6 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     //configureIngredientCell updates the cell contents
     func configureIngredientCell(_ cell: SelectedIngredientCell, at indexPath: IndexPath) {
         
-        //display status
-        print("configuring selected ingredients cell")
-        
         //fetch ingredient
         let ingredient = fetchedResultsController.object(at: indexPath as IndexPath)
         
@@ -196,7 +198,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
                 
         }
         
-        return recipeEmissions
+        let emissionsPerServe = recipeEmissions / Double(servingSize)
+        
+        return emissionsPerServe
     }
     
     //MARK: - Table View DataSource Protocol Functions
