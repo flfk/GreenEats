@@ -10,12 +10,12 @@ import UIKit
 //import Core Data
 import CoreData
 
-//add protocols for tableview data source and delegate, NS fetched results controller delegate
-class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
+//add protocols for tableview data source and delegate, NS fetched results controller delegate, Textfield delegate
+class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UITextFieldDelegate {
 
     //MARK: - Properties
     
-    @IBOutlet weak var recipeNameLbl: UILabel!
+    @IBOutlet weak var recipeNameTxtFld: UITextField!
     @IBOutlet weak var servingSizeLbl: UILabel!
     @IBOutlet weak var recipeRatingImg: UIImageView!
     @IBOutlet weak var recipeEmissionsLbl: UILabel!
@@ -63,11 +63,18 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         ingredientsTableView.dataSource = self
         ingredientsTableView.delegate = self
         
+        //set the textfield delegate
+        recipeNameTxtFld.delegate = self
+        
         //add view controller as an observer so that when the app enters the background data is saved
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
         
         //set the serving size label
         servingSizeLbl.text = "\(servingSize)"
+        
+        //Set textfield font size to auto-adjust for longer names with mininum size of 12
+        recipeNameTxtFld.adjustsFontSizeToFitWidth = true
+        recipeNameTxtFld.minimumFontSize = 12
         
     }
     
@@ -279,5 +286,17 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
             }
         }
     }
-
+    
+    //MARK: - Text Field Delegate Functions
+    
+    //hide keyboard when the user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        recipeNameTxtFld.resignFirstResponder()
+        return true
+    }
+    
 }
