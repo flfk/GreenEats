@@ -25,6 +25,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     var recipe: Recipe?
     
+    //test if view controller popped due to recipe being abandoned
+    var deleteRecipeBackBtn = true
+    
     //MARK: - Core Data Stack Properties
     
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Ingredient> = {
@@ -78,6 +81,18 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
     }
     
+    //MARK: - View will dissapear
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if self.isMovingFromParentViewController && deleteRecipeBackBtn {
+            //delete recipe
+            recipe?.managedObjectContext?.delete(recipe!)
+        }
+        
+    }
+    
     //MARK: - Actions
 
     @IBAction func minusServingBtn(_ sender: Any) {
@@ -116,7 +131,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
             recipe?.name = recipeNameTxtFld.text
             recipe?.emissions = calculateRecipeEmissions()
             recipe?.servings = Double(servingSize)
-            recipe?.rating = "Placeholder"
+            recipe?.rating = "1 - Updated Colors"
             
             //Pop view controller
             _ = navigationController?.popViewController(animated: true)
@@ -124,6 +139,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         } else {
             emptyTextfieldAlert(title: "", message: "Please enter recipe name")
         }
+        
+        //indicate recipe not abandoned and should be saved
+        deleteRecipeBackBtn = false
     
     }
 
@@ -166,7 +184,6 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         }
         
         ingredientsTableView.isHidden = !hasIngredients
-        print("Update View Function - Ingredients Table View")
         
         //update the emissions label
         let roundedRecipeEmissions = Int(calculateRecipeEmissions())
@@ -256,8 +273,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
             else {
                 fatalError("Unexpected Index Path")
         }
-        
-        print("Configure cell should be called in cell for row at")
+        print("calling cellForRow")
         configureIngredientCell(cell, at: indexPath)
         
         return cell

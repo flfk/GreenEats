@@ -55,7 +55,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         self.setupView()
         
         //set tableView delegate and datasource
-        recipeTableView.delegate = self
+        recipeTableView.dataSource = self
         recipeTableView.delegate = self
         
         //add view controller as an observer so that when the app enters the background data is saved
@@ -104,10 +104,11 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         if let recipes = fetchedResultsController.fetchedObjects {
             hasRecipes = recipes.count > 0
+
         }
         
+        
         recipeTableView.isHidden = !hasRecipes
-        print("Update View Function - Recipe Table View")
     }
     
     //if there are no recipes display setup label
@@ -126,17 +127,14 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     //configureRecipeCell updates the cell contents
     func configureRecipeCell(_ cell: RecipeCell, at indexPath: IndexPath) {
         
-        //display status
-        print("configuring recipe cell")
-        
         //fetch recipe
-        let recipe = fetchedResultsController.object(at: indexPath)
+        let recipe = fetchedResultsController.object(at: indexPath as IndexPath)
         
         //configure cell contents
         //XX PLACEHOLDER
         cell.recipeNameLbl.text = recipe.name
         cell.recipeEmmissionsLbl.text = "\(Int(recipe.emissions))"
-        cell.recipeEmojiImg.image = UIImage(named: recipe.rating!)
+        //cell.recipeEmojiImg.image = UIImage(named: recipe.rating!)
     }
     
     //attemptFetch fetches the data from the fetched results controller
@@ -168,6 +166,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             else {
                 fatalError("Unexpected Index Path")
         }
+        
+        configureRecipeCell(cell, at: indexPath)
         
         return cell
     }
