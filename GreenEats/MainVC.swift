@@ -20,7 +20,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     var newRecipe: Recipe?
     
-    private let segueAddRecipe = "AddRecipeSegue"
+    private let segueEditRecipe = "EditRecipeSegue"
     
     //MARK: - Core Data Stack Properties
     
@@ -68,15 +68,19 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationViewController = segue.destination as? AddRecipeVC else { return }
         
-        if segue.identifier == segueAddRecipe {
-            
+        if let indexPath = recipeTableView.indexPathForSelectedRow, segue.identifier == segueEditRecipe {
+            destinationViewController.recipe = fetchedResultsController.object(at: indexPath as IndexPath)
+            recipeTableView.deselectRow(at: indexPath, animated: true)
+        } else {
             //create the recipe data instance
             let newRecipe = Recipe(context: adManagedObjectContext)
             //configure the newRecipe creation date
             newRecipe.createdAt = "\(Date())"
             //send the new recipe to the AddRecipe view controller
             destinationViewController.recipe = newRecipe
+            destinationViewController.deleteRecipeBackBtn = false
         }
+        
        
     }
     

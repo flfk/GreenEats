@@ -95,6 +95,7 @@
                                             <outlet property="recipeEmmissionsLbl" destination="xjH-rl-vGI" id="MGa-h0-jBf"/>
                                             <outlet property="recipeEmojiImg" destination="NAk-la-W8q" id="u8h-X5-wLv"/>
                                             <outlet property="recipeNameLbl" destination="hVf-29-arY" id="4h8-FV-nGg"/>
+                                            <segue destination="euW-k2-qLO" kind="show" identifier="EditRecipeSegue" id="07s-Kl-um4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -697,4 +698,7 @@
         <image name="Plus Serving" width="36" height="36"/>
         <image name="broccoli" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="07s-Kl-um4"/>
+    </inferredMetricsTieBreakers>
 </document>

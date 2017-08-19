@@ -28,6 +28,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     //test if view controller popped due to recipe being abandoned
     var deleteRecipeBackBtn = true
     
+    private let segueAddRecipe = "AddRecipeSegue"
+    private let segueEditRecipe = "EditRecipeSegue"
+    
     //MARK: - Core Data Stack Properties
     
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Ingredient> = {
