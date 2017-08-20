@@ -446,15 +446,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search Ingredient" translatesAutoresizingMaskIntoConstraints="NO" id="SpA-cu-r92">
-                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="2Tt-lO-Itl"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aZg-6c-rHb">
-                                <rect key="frame" x="0.0" y="88" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddIngredientCell" rowHeight="51" id="MBi-M6-M32" customClass="AddIngredientCell" customModule="GreenEats" customModuleProvider="target">
@@ -510,17 +503,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aZg-6c-rHb" firstAttribute="leading" secondItem="H0h-OR-Zfh" secondAttribute="leading" id="0il-7e-JIq"/>
-                            <constraint firstAttribute="trailing" secondItem="SpA-cu-r92" secondAttribute="trailing" id="1ag-Dq-GIW"/>
-                            <constraint firstItem="SpA-cu-r92" firstAttribute="leading" secondItem="H0h-OR-Zfh" secondAttribute="leading" id="Orb-6m-WBF"/>
-                            <constraint firstItem="SpA-cu-r92" firstAttribute="top" secondItem="mMw-r7-gbQ" secondAttribute="bottom" id="dFz-lc-nH3"/>
-                            <constraint firstItem="aZg-6c-rHb" firstAttribute="top" secondItem="SpA-cu-r92" secondAttribute="bottom" id="fJ9-KH-6OO"/>
+                            <constraint firstItem="aZg-6c-rHb" firstAttribute="top" secondItem="H0h-OR-Zfh" secondAttribute="top" id="7q6-ot-J1y"/>
                             <constraint firstAttribute="trailing" secondItem="aZg-6c-rHb" secondAttribute="trailing" id="uDV-Cc-Adx"/>
                             <constraint firstItem="dcb-BL-jsv" firstAttribute="top" secondItem="aZg-6c-rHb" secondAttribute="bottom" id="xcI-v7-iJd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addIngredientTableView" destination="aZg-6c-rHb" id="b7Z-Y5-YXv"/>
-                        <outlet property="ingredientSearchBar" destination="SpA-cu-r92" id="dLg-8z-gQH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eB6-SA-6UM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -701,6 +690,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="07s-Kl-um4"/>
-        <segue reference="gr7-gf-gRY"/>
+        <segue reference="L3D-fB-Jvs"/>
     </inferredMetricsTieBreakers>
 </document>
