@@ -21,15 +21,15 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     @IBOutlet weak var recipeEmissionsLbl: UILabel!
     @IBOutlet weak var ingredientsTableView: UITableView!
     
-    var servingSize = 1
+    var servingSize: Double?
     
     var recipe: Recipe?
     
     //test if view controller popped due to recipe being abandoned
-    var deleteRecipeBackBtn = true
+    var deleteRecipeBackBtn: Bool?
     
     private let segueAddRecipe = "AddRecipeSegue"
-    private let segueEditRecipe = "EditRecipeSegue"
+    private let segueEditIngredient = "EditIngredientSegue"
     
     //MARK: - Core Data Stack Properties
     
@@ -71,16 +71,21 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         //set the textfield delegate
         recipeNameTxtFld.delegate = self
-        
-        //add view controller as an observer so that when the app enters the background data is saved
-        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
-        
-        //set the serving size label
-        servingSizeLbl.text = "\(servingSize)"
+        // set recipeName textfield
+        recipeNameTxtFld.text = recipe?.name
         
         //Set textfield font size to auto-adjust for longer names with mininum size of 12
         recipeNameTxtFld.adjustsFontSizeToFitWidth = true
         recipeNameTxtFld.minimumFontSize = 12
+        
+        //set the serving size label
+        let roundedServingSize = Int(servingSize!)
+        servingSizeLbl.text = "\(roundedServingSize)"
+        
+        //add view controller as an observer so that when the app enters the background data is saved
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
+        
+
         
     }
     
@@ -89,7 +94,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        if self.isMovingFromParentViewController && deleteRecipeBackBtn {
+        if self.isMovingFromParentViewController && deleteRecipeBackBtn! {
             //delete recipe
             recipe?.managedObjectContext?.delete(recipe!)
         }
@@ -103,8 +108,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         if servingSize == 1 {
             return
         } else {
-            servingSize = servingSize - 1
-            servingSizeLbl.text = "\(servingSize)"
+            servingSize = servingSize! - 1
+            let roundedServingSize = Int(servingSize!)
+            servingSizeLbl.text = "\(roundedServingSize)"
             
             updateView()
         }
@@ -117,8 +123,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         if servingSize == 19 {
             return
         } else {
-            servingSize = servingSize + 1
-            servingSizeLbl.text = "\(servingSize)"
+            servingSize = servingSize! + 1
+            let roundedServingSize = Int(servingSize!)
+            servingSizeLbl.text = "\(roundedServingSize)"
             
             updateView()
         }
@@ -133,7 +140,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
             //configure recipe
             recipe?.name = recipeNameTxtFld.text
             recipe?.emissions = calculateRecipeEmissions()
-            recipe?.servings = Double(servingSize)
+            recipe?.servings = servingSize!
             recipe?.rating = "1 - Updated Colors"
             
             //Pop view controller
@@ -152,10 +159,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationViewController = segue.destination as? AddIngredientVC else { return }
-        destinationViewController.recipe = recipe
-        
-        //destinationViewController = recipe
+
+            guard let destinationViewController = segue.destination as? AddIngredientVC else { return }
+            destinationViewController.recipe = recipe
         
     }
     
@@ -246,7 +252,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
                 
         }
         
-        let emissionsPerServe = recipeEmissions / Double(servingSize)
+        let emissionsPerServe = recipeEmissions / servingSize!
         
         return emissionsPerServe
     }

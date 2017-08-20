@@ -69,8 +69,12 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         guard let destinationViewController = segue.destination as? AddRecipeVC else { return }
         
         if let indexPath = recipeTableView.indexPathForSelectedRow, segue.identifier == segueEditRecipe {
-            destinationViewController.recipe = fetchedResultsController.object(at: indexPath as IndexPath)
+            let recipe = fetchedResultsController.object(at: indexPath as IndexPath)
+            destinationViewController.recipe = recipe
             recipeTableView.deselectRow(at: indexPath, animated: true)
+            //ensure that recipe not deleted
+            destinationViewController.deleteRecipeBackBtn = false
+            destinationViewController.servingSize = recipe.servings
         } else {
             //create the recipe data instance
             let newRecipe = Recipe(context: adManagedObjectContext)
@@ -78,7 +82,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             newRecipe.createdAt = "\(Date())"
             //send the new recipe to the AddRecipe view controller
             destinationViewController.recipe = newRecipe
-            destinationViewController.deleteRecipeBackBtn = false
+            destinationViewController.servingSize = 1
+            //if back button pressed delete recipe
+            destinationViewController.deleteRecipeBackBtn = true
         }
         
        
