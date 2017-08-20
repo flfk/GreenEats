@@ -70,7 +70,7 @@
                                                         <constraint firstAttribute="height" constant="13" id="vdj-WC-5dL"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1 - Updated Colors" translatesAutoresizingMaskIntoConstraints="NO" id="NAk-la-W8q">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1 - Small" translatesAutoresizingMaskIntoConstraints="NO" id="NAk-la-W8q">
                                                     <rect key="frame" x="187" y="12.5" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="EqM-bd-uIW"/>
@@ -681,7 +681,7 @@
     </scenes>
     <resources>
         <image name="1 - Large" width="93" height="93"/>
-        <image name="1 - Updated Colors" width="102" height="102"/>
+        <image name="1 - Small" width="51" height="50"/>
         <image name="Add Button" width="35" height="35"/>
         <image name="Disclosure Indicator" width="16" height="28"/>
         <image name="Minus Serving" width="36" height="36"/>
@@ -690,6 +690,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="07s-Kl-um4"/>
-        <segue reference="L3D-fB-Jvs"/>
+        <segue reference="gr7-gf-gRY"/>
     </inferredMetricsTieBreakers>
 </document>

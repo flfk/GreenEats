@@ -104,18 +104,9 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let gramsEmitted = calculateInEmissions()
         let roundedGramsEmitted = Int(gramsEmitted)
         ingredientEmissionsLbl.text = "\(roundedGramsEmitted)"
+        let imageName = calculateIngredientRating() + "Large"
+        ingredientRatingImg.image = UIImage(named: imageName)
         
-        
-        //use a switch statement to identify component that was selected
-//        switch(component) {
-//        case 0:
-//            wholeNumbers = quantityOptionsArray[component][row]
-//        case 1:
-//            fraction = quantityOptionsArray[component][row]
-//        case 2:
-//            quantityType = quantityOptionsArray[component][row]
-//        default:break
-//        }
         
     }
     
@@ -177,6 +168,26 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let emissionsInGrams = kgSelected * ingredient.emissionsPerKg * 1000
         
         return emissionsInGrams
+    }
+    
+    func calculateIngredientRating() -> String {
+        var ingredientRating = ""
+        
+        let ingredientEmissions = calculateInEmissions()
+        
+        if ingredientEmissions < 1500 {
+            ingredientRating = "1 - "
+        } else if ingredientEmissions < 3000 {
+            ingredientRating = "2 - "
+        } else if ingredientEmissions < 5000 {
+            ingredientRating = "3 - "
+        } else if ingredientEmissions < 8000 {
+            ingredientRating = "4 - "
+        } else {
+            ingredientRating = "5 - "
+        }
+        
+        return ingredientRating
     }
     
     fileprivate func setUpQuantityOptionsArray() {

@@ -194,9 +194,14 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         ingredientsTableView.isHidden = !hasIngredients
         
-        //update the emissions label
+        //update the emissions label and image
         let roundedRecipeEmissions = Int(calculateRecipeEmissions())
         recipeEmissionsLbl.text = "\(roundedRecipeEmissions)"
+        let imageName = calculateRecipeRating() + "Large"
+        recipeRatingImg.image = UIImage(named: imageName)
+        
+        
+        
     }
     
     //if there are no ingredients display setup label
@@ -263,15 +268,15 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         let recipeEmissions = calculateRecipeEmissions()
         
         if recipeEmissions < 1500 {
-          recipeRating = "1 - Small"
+          recipeRating = "1 - "
         } else if recipeEmissions < 3000 {
-            recipeRating = "2 - Small"
+            recipeRating = "2 - "
         } else if recipeEmissions < 5000 {
-            recipeRating = "3 - Small"
+            recipeRating = "3 - "
         } else if recipeEmissions < 8000 {
-            recipeRating = "4 - Small"
+            recipeRating = "4 - "
         } else {
-            recipeRating = "5 - Small"
+            recipeRating = "5 - "
         }
         
         return recipeRating
