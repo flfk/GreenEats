@@ -141,7 +141,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
             recipe?.name = recipeNameTxtFld.text
             recipe?.emissions = calculateRecipeEmissions()
             recipe?.servings = servingSize!
-            recipe?.rating = "1 - Updated Colors"
+            recipe?.rating = calculateRecipeRating()
             
             //Pop view controller
             _ = navigationController?.popViewController(animated: true)
@@ -255,6 +255,26 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         let emissionsPerServe = recipeEmissions / servingSize!
         
         return emissionsPerServe
+    }
+    
+    func calculateRecipeRating() -> String {
+        var recipeRating = ""
+        
+        let recipeEmissions = calculateRecipeEmissions()
+        
+        if recipeEmissions < 1500 {
+          recipeRating = "1 - Small"
+        } else if recipeEmissions < 3000 {
+            recipeRating = "2 - Small"
+        } else if recipeEmissions < 5000 {
+            recipeRating = "3 - Small"
+        } else if recipeEmissions < 8000 {
+            recipeRating = "4 - Small"
+        } else {
+            recipeRating = "5 - Small"
+        }
+        
+        return recipeRating
     }
     
     func emptyTextfieldAlert (title: String, message: String) {

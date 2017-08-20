@@ -80,6 +80,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             let newRecipe = Recipe(context: adManagedObjectContext)
             //configure the newRecipe creation date
             newRecipe.createdAt = "\(Date())"
+            newRecipe.rating = "1 - Small"
             //send the new recipe to the AddRecipe view controller
             destinationViewController.recipe = newRecipe
             destinationViewController.servingSize = 1
@@ -144,7 +145,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         //XX PLACEHOLDER
         cell.recipeNameLbl.text = recipe.name
         cell.recipeEmmissionsLbl.text = "\(Int(recipe.emissions))"
-        //cell.recipeEmojiImg.image = UIImage(named: recipe.rating!)
+        cell.recipeEmojiImg.image = UIImage(named: recipe.rating!)
     }
     
     //attemptFetch fetches the data from the fetched results controller
