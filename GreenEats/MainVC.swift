@@ -18,9 +18,13 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     @IBOutlet weak var recipeTableView: UITableView!
     
+    @IBOutlet weak var recipeSortControl: UISegmentedControl!
+    
     var newRecipe: Recipe?
     
     private let segueEditRecipe = "EditRecipeSegue"
+    
+    let segmentSortChoice = 0
     
     //MARK: - Core Data Stack Properties
     
@@ -30,7 +34,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         let fetchRequest: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         
         //configure fetch request
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "emissions", ascending: false)]
         
         //create fetch request controller
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: adManagedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
@@ -40,6 +44,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         return fetchedResultsController
     }()
+    
     
     var managedObjectContext: NSManagedObjectContext?
     
@@ -106,6 +111,29 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         print("Managed Object Context saved to persitent container")
     }
     
+    //MARK: - Actions
+    
+    @IBAction func recipeSortSgmtCntrl(_ sender: Any) {
+        
+        switch recipeSortControl.selectedSegmentIndex {
+        case 0:
+            self.fetchedResultsController.fetchRequest.sortDescriptors = nil
+            fetchedResultsController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "emissions", ascending: false)]
+            self.fetchedResultsController.fetchRequest.sortDescriptors = nil
+            attemptFetch()
+            updateView()
+        case 1:
+            self.fetchedResultsController.fetchRequest.sortDescriptors = nil
+            fetchedResultsController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+            attemptFetch()
+            updateView()
+        default:
+            break
+        }
+        
+    }
+    
+    
     //MARK: - Helper Methods
     
     //UpdateView updates the user interface
@@ -120,6 +148,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         
         recipeTableView.isHidden = !hasRecipes
+        
+        recipeTableView.reloadData()
     }
     
     //if there are no recipes display setup label

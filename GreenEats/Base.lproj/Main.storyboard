@@ -22,8 +22,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccA-kb-KhQ">
+                                <rect key="frame" x="0.0" y="44" width="320" height="60"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ma8-SD-UQG">
+                                        <rect key="frame" x="60.5" y="16" width="200" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="CSs-CA-COs"/>
+                                            <constraint firstAttribute="width" constant="200" id="GSG-bC-2Fq"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Low to high"/>
+                                            <segment title="A to Z"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="recipeSortSgmtCntrl:" destination="BYZ-38-t0r" eventType="valueChanged" id="8KB-PY-Mrg"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97638529539108276" green="0.97652524709701538" blue="0.97635465860366821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ma8-SD-UQG" firstAttribute="centerX" secondItem="ccA-kb-KhQ" secondAttribute="centerX" id="5qc-dK-aOr"/>
+                                    <constraint firstAttribute="height" constant="60" id="cLj-dF-DUR"/>
+                                    <constraint firstItem="Ma8-SD-UQG" firstAttribute="centerY" secondItem="ccA-kb-KhQ" secondAttribute="centerY" id="xLh-fr-X4d"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VZR-dz-Eka">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="438"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="70" id="NAG-tj-rdb" customClass="RecipeCell" customModule="GreenEats" customModuleProvider="target">
@@ -105,8 +130,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VZR-dz-Eka" secondAttribute="trailing" id="0KY-41-5OW"/>
                             <constraint firstAttribute="bottom" secondItem="VZR-dz-Eka" secondAttribute="bottom" id="B1w-MJ-5rr"/>
-                            <constraint firstItem="VZR-dz-Eka" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FFP-BJ-6vW"/>
+                            <constraint firstAttribute="trailing" secondItem="ccA-kb-KhQ" secondAttribute="trailing" id="Eoy-CZ-5CH"/>
+                            <constraint firstItem="VZR-dz-Eka" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="130" id="FFP-BJ-6vW"/>
+                            <constraint firstItem="ccA-kb-KhQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qqp-qh-RuO"/>
                             <constraint firstItem="VZR-dz-Eka" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rIc-uU-V7P"/>
+                            <constraint firstItem="ccA-kb-KhQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yqO-rB-k7l"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -121,6 +149,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="recipeSortControl" destination="Ma8-SD-UQG" id="VZC-d4-RnV"/>
                         <outlet property="recipeTableView" destination="VZR-dz-Eka" id="lUK-20-aIM"/>
                     </connections>
                 </viewController>
