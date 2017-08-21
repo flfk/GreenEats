@@ -217,7 +217,7 @@
                                             <action selector="plusServingBtn:" destination="euW-k2-qLO" eventType="touchUpInside" id="aDb-YT-K81"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNg-iR-roL">
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNg-iR-roL">
                                         <rect key="frame" x="175" y="44" width="16" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="8oG-JE-GZf"/>
@@ -408,7 +408,6 @@
                                                     <outlet property="ingredientImg" destination="dsC-zJ-zdM" id="ElS-VU-2kT"/>
                                                     <outlet property="ingredientNameLbl" destination="tDS-jF-ma8" id="pRn-QC-EMX"/>
                                                     <outlet property="ingredientQuantityLbl" destination="FsQ-uh-LUx" id="Qo1-CR-tCp"/>
-                                                    <segue destination="sdc-WD-JPc" kind="show" identifier="EditIngredientSegue" id="gr7-gf-gRY"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -719,6 +718,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="07s-Kl-um4"/>
-        <segue reference="gr7-gf-gRY"/>
     </inferredMetricsTieBreakers>
 </document>

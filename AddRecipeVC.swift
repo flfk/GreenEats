@@ -330,6 +330,10 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         return 50
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ingredientsTableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     //MARK: - NS Fetched Results Controller Delegate Functions
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
