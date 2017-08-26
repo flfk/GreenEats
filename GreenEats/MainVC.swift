@@ -34,7 +34,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         let fetchRequest: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         
         //configure fetch request
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "emissions", ascending: false)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "emissions", ascending: true)]
         
         //create fetch request controller
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: adManagedObjectContext, sectionNameKeyPath: nil, cacheName: nil)

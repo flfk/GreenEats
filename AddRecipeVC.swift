@@ -39,7 +39,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         let fetchRequest: NSFetchRequest<Ingredient> = Ingredient.fetchRequest()
         
         //configure fetch request
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "emissions", ascending: false)]
         
         //predicate fetch request for project
         fetchRequest.predicate = NSPredicate(format: "recipe.createdAt == %@", self.recipe!.createdAt!)
@@ -143,15 +143,15 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
             recipe?.servings = servingSize!
             recipe?.rating = calculateRecipeRating()
             
+            //indicate recipe not abandoned and should be saved
+            deleteRecipeBackBtn = false
+            
             //Pop view controller
             _ = navigationController?.popViewController(animated: true)
 
         } else {
             emptyTextfieldAlert(title: "", message: "Please enter recipe name")
         }
-        
-        //indicate recipe not abandoned and should be saved
-        deleteRecipeBackBtn = false
     
     }
 
@@ -203,8 +203,6 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         if let ingredients = recipe?.ingredients {
             hasIngredients = ingredients.count > 0
         }
-        
-        print("\(recipe?.ingredients)")
         
         ingredientsTableView.isHidden = !hasIngredients
         

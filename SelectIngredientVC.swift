@@ -82,7 +82,7 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                 newIngredient.name = ingredient.ingredientName
                 newIngredient.icon = ingredient.ingredientIcon
                 newIngredient.emissionsPerKg = ingredient.emissionsPerKg
-                newIngredient.standardPortionName = ingredient.ingredientName
+                newIngredient.standardPortionName = ingredient.standardPortionName
                 newIngredient.standardPortionSizeKg = ingredient.standardPortionSizeKg
                 //attributes that are editable
                 newIngredient.emissions = gramsEmitted
