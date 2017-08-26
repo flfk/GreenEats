@@ -44,6 +44,7 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         addIngredientTableView.tableHeaderView = searchController.searchBar
+
         
     }
     

@@ -318,7 +318,7 @@
                                         </constraints>
                                         <state key="normal" image="Add Button"/>
                                         <connections>
-                                            <segue destination="Vdh-ec-Btq" kind="show" id="Ijv-5D-FHn"/>
+                                            <segue destination="Vdh-ec-Btq" kind="show" identifier="AddIngredientSegue" id="Ijv-5D-FHn"/>
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cE9-66-jNl">
@@ -408,6 +408,7 @@
                                                     <outlet property="ingredientImg" destination="dsC-zJ-zdM" id="ElS-VU-2kT"/>
                                                     <outlet property="ingredientNameLbl" destination="tDS-jF-ma8" id="pRn-QC-EMX"/>
                                                     <outlet property="ingredientQuantityLbl" destination="FsQ-uh-LUx" id="Qo1-CR-tCp"/>
+                                                    <segue destination="sdc-WD-JPc" kind="show" identifier="EditIngredientSegue" id="VkE-CH-GUk"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -718,5 +719,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="07s-Kl-um4"/>
+        <segue reference="VkE-CH-GUk"/>
     </inferredMetricsTieBreakers>
 </document>

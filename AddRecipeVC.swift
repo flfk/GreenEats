@@ -28,7 +28,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     //test if view controller popped due to recipe being abandoned
     var deleteRecipeBackBtn: Bool?
     
-    private let segueAddRecipe = "AddRecipeSegue"
+    private let segueAddIngredient = "AddIngredientSegue"
     private let segueEditIngredient = "EditIngredientSegue"
     
     //MARK: - Core Data Stack Properties
@@ -160,8 +160,20 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+        if segue.identifier == segueAddIngredient {
             guard let destinationViewController = segue.destination as? AddIngredientVC else { return }
             destinationViewController.recipe = recipe
+        } else if segue.identifier == segueEditIngredient {
+            guard let destinationViewController = segue.destination as? SelectIngredientVC else { return }
+            if let indexPath = ingredientsTableView.indexPathForSelectedRow {
+                let ingredientToEdit = fetchedResultsController.object(at: indexPath as IndexPath)
+                destinationViewController.ingredientToEdit = ingredientToEdit
+                destinationViewController.recipe = recipe
+                print("\(ingredientToEdit)")
+            }
+            
+        }
+        
         
     }
     
@@ -191,6 +203,8 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         if let ingredients = recipe?.ingredients {
             hasIngredients = ingredients.count > 0
         }
+        
+        print("\(recipe?.ingredients)")
         
         ingredientsTableView.isHidden = !hasIngredients
         
