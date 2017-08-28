@@ -126,8 +126,11 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggZ-yx-AlV" userLabel="closeSideMenuBtn">
-                                <rect key="frame" x="0.0" y="44" width="46" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="550" height="568"/>
                                 <color key="backgroundColor" red="0.4549019608" green="0.4431372549" blue="0.4431372549" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="550" id="Yn9-5q-Xl6"/>
+                                </constraints>
                                 <color key="tintColor" red="0.45490196078431372" green="0.44313725490196076" blue="0.44313725490196076" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -219,16 +222,16 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VZR-dz-Eka" secondAttribute="trailing" id="0KY-41-5OW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kXQ-xS-kOm" secondAttribute="bottom" id="2X0-LX-vZS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ggZ-yx-AlV" secondAttribute="bottom" id="4rD-AM-MsH"/>
                             <constraint firstItem="kXQ-xS-kOm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AWu-n0-V9v"/>
                             <constraint firstAttribute="bottom" secondItem="VZR-dz-Eka" secondAttribute="bottom" id="B1w-MJ-5rr"/>
                             <constraint firstAttribute="trailing" secondItem="ccA-kb-KhQ" secondAttribute="trailing" id="Eoy-CZ-5CH"/>
                             <constraint firstItem="VZR-dz-Eka" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="130" id="FFP-BJ-6vW"/>
-                            <constraint firstItem="ggZ-yx-AlV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="LtN-oL-czA"/>
-                            <constraint firstItem="ggZ-yx-AlV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YGH-mi-c68"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ggZ-yx-AlV" secondAttribute="bottom" id="YOo-Kb-WrH"/>
+                            <constraint firstItem="ggZ-yx-AlV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eJ3-hG-ygy"/>
                             <constraint firstItem="ccA-kb-KhQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qqp-qh-RuO"/>
                             <constraint firstItem="VZR-dz-Eka" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rIc-uU-V7P"/>
                             <constraint firstItem="kXQ-xS-kOm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tfD-zc-WVC"/>
+                            <constraint firstItem="ggZ-yx-AlV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uGs-rl-KHl"/>
                             <constraint firstItem="ccA-kb-KhQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yqO-rB-k7l"/>
                         </constraints>
                     </view>
@@ -249,7 +252,8 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="closeSideMenuBtnLeadingConstraint" destination="YGH-mi-c68" id="Sxn-Uy-08P"/>
+                        <outlet property="closeSideMenuBtn" destination="ggZ-yx-AlV" id="7Jm-h4-M6x"/>
+                        <outlet property="closeSideMenuBtnLeadingConstraint" destination="eJ3-hG-ygy" id="BVl-48-InW"/>
                         <outlet property="recipeSortControl" destination="Ma8-SD-UQG" id="VZC-d4-RnV"/>
                         <outlet property="recipeTableView" destination="VZR-dz-Eka" id="lUK-20-aIM"/>
                         <outlet property="sideMenu" destination="kXQ-xS-kOm" id="Rzt-bv-pFM"/>
