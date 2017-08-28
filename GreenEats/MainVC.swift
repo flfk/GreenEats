@@ -16,8 +16,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     //MARK: - Properties
     
+    @IBOutlet weak var sideMenu: UIView!
     @IBOutlet weak var recipeTableView: UITableView!
-    
     @IBOutlet weak var recipeSortControl: UISegmentedControl!
     
     var newRecipe: Recipe?
@@ -25,6 +25,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     private let segueEditRecipe = "EditRecipeSegue"
     
     let segmentSortChoice = 0
+    
+    //MARK: - Side Menu Properties
+    
+    @IBOutlet weak var sideMenuLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var closeSideMenuBtnLeadingConstraint: NSLayoutConstraint!
+    
+    var menuShowing = false
+    
+    
     
     //MARK: - Core Data Stack Properties
     
@@ -65,6 +74,14 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         //add view controller as an observer so that when the app enters the background data is saved
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
+        
+        //set side menu constraints and properties
+        sideMenuLeadingConstraint.constant = -230
+        closeSideMenuBtnLeadingConstraint.constant = -320
+            //-1 * self.view.frame.width
+        
+        sideMenu.layer.shadowOpacity = 0.8
+        
     
     }
     
@@ -132,6 +149,33 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
         
     }
+    
+    @IBAction func selectSideMenu(_ sender: Any) {
+        
+        if menuShowing {
+            sideMenuLeadingConstraint.constant = -230
+            closeSideMenuBtnLeadingConstraint.constant = -320
+        } else {
+            sideMenuLeadingConstraint.constant = 0
+            closeSideMenuBtnLeadingConstraint.constant = 0
+            
+            //animate side menu
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        
+        menuShowing = !menuShowing
+    }
+    
+    @IBAction func closeSideMenuBtn(_ sender: Any) {
+        
+        sideMenuLeadingConstraint.constant = -225
+        closeSideMenuBtnLeadingConstraint.constant = -1 * self.view.frame.width
+        
+    }
+    
+    
     
     
     //MARK: - Helper Methods

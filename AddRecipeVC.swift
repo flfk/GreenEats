@@ -319,7 +319,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
             else {
                 fatalError("Unexpected Index Path")
         }
-        print("calling cellForRow")
+        
         configureIngredientCell(cell, at: indexPath)
         
         return cell
