@@ -58,6 +58,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //hide navigation controller top bar
+        self.navigationController?.navigationBar.isHidden = true
 
         //attempt to fetch the data
         attemptFetch()

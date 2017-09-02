@@ -35,6 +35,7 @@
                                             <segment title="Low to high"/>
                                             <segment title="A to Z"/>
                                         </segments>
+                                        <color key="tintColor" red="0.42352941179999998" green="0.81960784310000001" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="recipeSortSgmtCntrl:" destination="BYZ-38-t0r" eventType="valueChanged" id="8KB-PY-Mrg"/>
                                         </connections>

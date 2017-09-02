@@ -31,6 +31,9 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //hide navigation controller top bar
+        self.navigationController?.navigationBar.isHidden = true
 
         //set delegate and datasource as self
         addIngredientTableView.dataSource = self
