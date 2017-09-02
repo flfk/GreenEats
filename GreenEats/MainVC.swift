@@ -36,6 +36,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     var menuShowing = false
     
+    @IBOutlet weak var additionalMenuBtn: UIBarButtonItem!
     
     
     //MARK: - Core Data Stack Properties
@@ -74,7 +75,13 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         //set tableView delegate and datasource
         recipeTableView.dataSource = self
         recipeTableView.delegate = self
+        
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backButton")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backButton")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
 
+        //ensure additional menu bar button item in original form
+        additionalMenuBtn.image = UIImage(named: "additionalMenuSmall")?.withRenderingMode(.alwaysOriginal)
     }
     
     //MARK: - View Will Appear
@@ -157,8 +164,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     @IBAction func selectSideMenu(_ sender: Any) {
         
         sideMenuLeadingConstraint.constant = 0
+        self.navigationController?.navigationBar.layer.zPosition = -3
         
-            
         //animate side menu
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
@@ -171,12 +178,15 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         sideMenuLeadingConstraint.constant = -230
         
+        
         //animate side menu
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
         })
         
         closeSideMenuBtnLeadingConstraint.constant = -550
+        
+        self.navigationController?.navigationBar.layer.zPosition = 0
         
     }
     
