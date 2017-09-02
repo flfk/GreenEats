@@ -102,6 +102,10 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     }
     
     //MARK: - Actions
+    
+    @IBAction func closeVC(_ sender:Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     @IBAction func minusServingBtn(_ sender: Any) {
         

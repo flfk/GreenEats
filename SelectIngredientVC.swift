@@ -63,6 +63,10 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     //MARK: - Actions
     
+    @IBAction func closeVC(_ sender:Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func AddIngredientBtn(_ sender: Any) {
         
         //calculate quantitySelected, kgSelected and emissions in grams through helper methods
@@ -100,7 +104,6 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                 //pop view controller back 2 VCs to AddRecipe VC
                 let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
                 self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true);
-                
             }
             
         }

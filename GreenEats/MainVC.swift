@@ -36,8 +36,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     var menuShowing = false
     
-    @IBOutlet weak var additionalMenuBtn: UIBarButtonItem!
-    
     
     //MARK: - Core Data Stack Properties
     
@@ -66,6 +64,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //hide navigation controller top bar
+        self.navigationController?.navigationBar.isHidden = true
+        
         //attempt to fetch the data
         attemptFetch()
         
@@ -81,7 +82,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
 
         //ensure additional menu bar button item in original form
-        additionalMenuBtn.image = UIImage(named: "additionalMenuSmall")?.withRenderingMode(.alwaysOriginal)
+        //additionalMenuBtn.image = UIImage(named: "additionalMenuSmall")?.withRenderingMode(.alwaysOriginal)
     }
     
     //MARK: - View Will Appear
@@ -140,6 +141,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     }
     
     //MARK: - Actions
+    
     
     @IBAction func recipeSortSgmtCntrl(_ sender: Any) {
         

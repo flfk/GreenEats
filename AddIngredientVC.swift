@@ -70,6 +70,12 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         
     }
     
+    //MARK: - Actions
+    
+    @IBAction func closeVC(_ sender:Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     //MARK: - Helper Methods
     
     func searchBarIsEmpty() -> Bool {
