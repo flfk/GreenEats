@@ -166,7 +166,9 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     //MARK: - Helper Methods
     
     fileprivate func selectedQuantity() -> Double {
-        let integerSelected = Double(ingredientQuantityPicker.selectedRow(inComponent: 0))
+        let integerComponentRow = ingredientQuantityPicker.selectedRow(inComponent: 0)
+        let integerSelected = Double(quantityOptionsArray[0][integerComponentRow])!
+            //Double(ingredientQuantityPicker.selectedRow(inComponent: 0))
         
         var fractionSelected = 0.00
         let rowFractionSelected = ingredientQuantityPicker.selectedRow(inComponent: 1)

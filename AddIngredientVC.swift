@@ -17,6 +17,7 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
 
     @IBOutlet weak var addIngredientTableView: UITableView!
     
+    @IBOutlet weak var searchBarView: UIView!
     var recipe: Recipe?
     
     private let segueSelectIngredient = "SelectIngredientSegue"
@@ -40,7 +41,8 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         searchController.searchBar.barTintColor = greyColor
         searchController.searchBar.tintColor = darkGreyColor
         //searchController.searchBar.layer.borderColor = UIColor.clear.cgColor
-        searchController.searchBar.backgroundImage = UIImage(named: "searchBarBackground")
+        //searchController.searchBar.backgroundImage = UIImage(named: "searchBarBackground")
+        searchController.searchBar.backgroundImage = UIImage()
 
         //set delegate and datasource as self
         addIngredientTableView.dataSource = self
@@ -53,7 +55,7 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
-        addIngredientTableView.tableHeaderView = searchController.searchBar
+        searchBarView.addSubview(searchController.searchBar)
 
         
     }

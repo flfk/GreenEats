@@ -113,6 +113,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             //ensure that recipe not deleted
             destinationViewController.deleteRecipeBackBtn = false
             destinationViewController.servingSize = recipe.servings
+            //mark recipe state to setup UI
+            destinationViewController.newRecipe = false
         } else {
             //create the recipe data instance
             let newRecipe = Recipe(context: adManagedObjectContext)
@@ -124,6 +126,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             destinationViewController.servingSize = 1
             //if back button pressed delete recipe
             destinationViewController.deleteRecipeBackBtn = true
+            //mark recipe state to setup UI
+            destinationViewController.newRecipe = true
         }
         
        
@@ -273,11 +277,16 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         let recipe = fetchedResultsController.object(at: indexPath as IndexPath)
         
         //configure cell contents
-        //XX PLACEHOLDER
         cell.recipeNameLbl.text = recipe.name
         cell.recipeEmmissionsLbl.text = "\(Int(recipe.emissions))"
         let imageName = recipe.rating! + "Small"
         cell.recipeEmojiImg.image = UIImage(named: imageName)
+        
+        //Set label to auto-adjust for longer names with mininum size of 12
+        cell.recipeNameLbl.adjustsFontSizeToFitWidth = true
+        cell.recipeNameLbl.minimumScaleFactor = 0.7
+        cell.recipeEmmissionsLbl.adjustsFontSizeToFitWidth = true
+        cell.recipeEmmissionsLbl.minimumScaleFactor = 0.7
     }
     
     //attemptFetch fetches the data from the fetched results controller

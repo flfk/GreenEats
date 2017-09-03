@@ -21,9 +21,14 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     @IBOutlet weak var recipeEmissionsLbl: UILabel!
     @IBOutlet weak var ingredientsTableView: UITableView!
     
-    var servingSize: Double?
+    @IBOutlet weak var saveRecipeBtn: UIButton!
+    @IBOutlet weak var navBarLbl: UILabel!
+    @IBOutlet weak var trashBtn: UIButton!
     
+    var servingSize: Double?
     var recipe: Recipe?
+    var newRecipe: Bool?
+    
     
     //test if view controller popped due to recipe being abandoned
     var deleteRecipeBackBtn: Bool?
@@ -77,7 +82,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         // set recipeName textfield
         recipeNameTxtFld.text = recipe?.name
         
-        //Set textfield font size to auto-adjust for longer names with mininum size of 12
+        //Set textfield and label font sizes to auto-adjust for longer names with mininum size of 12
         recipeNameTxtFld.adjustsFontSizeToFitWidth = true
         recipeNameTxtFld.minimumFontSize = 12
         
@@ -85,10 +90,21 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         let roundedServingSize = Int(servingSize!)
         servingSizeLbl.text = "\(roundedServingSize)"
         
+        //set up UI
+        if newRecipe! {
+            navBarLbl.text = "Add Recipe"
+            saveRecipeBtn.isHidden = false
+            trashBtn.isHidden = true
+            
+        } else {
+            navBarLbl.text = "Edit Recipe"
+            saveRecipeBtn.isHidden = true
+            trashBtn.isHidden = false
+        }
+        
         //add view controller as an observer so that when the app enters the background data is saved
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
         
-
         
     }
     
@@ -161,6 +177,11 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         }
     
     }
+    
+    @IBAction func deleteRecipeBtn(_ sender: Any) {
+        deleteRecipeAlert(title: "", message: "Are you sure you want to delete this recipe?")
+    }
+    
 
 
     //MARK: - Navigation
@@ -244,11 +265,17 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         //configure cell contents
         cell.ingredientNameLbl.text = ingredient.name
-        let roundedIngredientQuantity = (ingredient.quantity * 100).rounded() / 100
+        let roundedIngredientQuantity = (ingredient.quantity * 10).rounded() / 10
         cell.ingredientQuantityLbl.text = "\(roundedIngredientQuantity)" + " " + "\(ingredient.quantityName!)"
         let roundedEmissions = Int(ingredient.emissions)
         cell.ingredientEmissionsLbl.text = "\(roundedEmissions)"
         cell.ingredientImg.image = UIImage(named: ingredient.icon!)
+        
+        //Set label to auto-adjust for longer names with mininum size of 12
+        cell.ingredientNameLbl.adjustsFontSizeToFitWidth = true
+        cell.ingredientNameLbl.minimumScaleFactor = 0.7
+        cell.ingredientEmissionsLbl.adjustsFontSizeToFitWidth = true
+        cell.ingredientEmissionsLbl.minimumScaleFactor = 0.7
     }
     
     //attemptFetch fetches the data from the fetched results controller
@@ -306,6 +333,22 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in alert.dismiss(animated: true, completion: nil)} ))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func deleteRecipeAlert (title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Delete", style: UIAlertActionStyle.destructive, handler: { action in alert.dismiss(animated: true, completion: nil)
+            
+            self.recipe?.managedObjectContext?.delete(self.recipe!)
+            self.navigationController?.popViewController(animated: true)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { action in alert.dismiss(animated: true, completion: nil)
+        }))
         
         self.present(alert, animated: true, completion: nil)
     }
