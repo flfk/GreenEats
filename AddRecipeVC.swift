@@ -160,20 +160,32 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         //test if recipe name textfield is empty
         if recipeNameTxtFld.text != "" {
             
-            //configure recipe
-            recipe?.name = recipeNameTxtFld.text
-            recipe?.emissions = calculateRecipeEmissions()
-            recipe?.servings = servingSize!
-            recipe?.rating = calculateRecipeRating()
+            //test if recipe has ingredients
+            var hasIngredients = false
             
-            //indicate recipe not abandoned and should be saved
-            deleteRecipeBackBtn = false
+            if let ingredients = recipe?.ingredients {
+                hasIngredients = ingredients.count > 0
+            }
             
-            //Pop view controller
-            _ = navigationController?.popViewController(animated: true)
+            if hasIngredients {
+                //configure recipe
+                recipe?.name = recipeNameTxtFld.text
+                recipe?.emissions = calculateRecipeEmissions()
+                recipe?.servings = servingSize!
+                recipe?.rating = calculateRecipeRating()
+                
+                //indicate recipe not abandoned and should be saved
+                deleteRecipeBackBtn = false
+                
+                //Pop view controller
+                _ = navigationController?.popViewController(animated: true)
+            } else {
+                unableToSaveAlert(title: "", message: "Don't forget to add some ingredients")
+            }
+            
 
         } else {
-            emptyTextfieldAlert(title: "", message: "Please enter recipe name")
+            unableToSaveAlert(title: "", message: "Don't forget to name your recipe")
         }
     
     }
@@ -328,7 +340,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         return recipeRating
     }
     
-    func emptyTextfieldAlert (title: String, message: String) {
+    func unableToSaveAlert (title: String, message: String) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         

@@ -79,55 +79,60 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         
         let quantityComponentRow = ingredientQuantityPicker.selectedRow(inComponent: 2)
         
-        if ingredientToEdit == nil {
-            if let ingredient = ingredient {
-                //create ingredient instance
-                let newIngredient = Ingredient(context: adManagedObjectContext)
+        //test to ensure a quantity is selected and save if it is 
+        if gramsEmitted == 0.00 {
+            unableToSaveAlert(title: "", message: "Don't forget to select a quantity")
+        } else {
+            
+            if ingredientToEdit == nil {
+                if let ingredient = ingredient {
+                    //create ingredient instance
+                    let newIngredient = Ingredient(context: adManagedObjectContext)
+                    
+                    //configure ingredient
+                    //attributes that will not be editable
+                    newIngredient.name = ingredient.ingredientName
+                    newIngredient.icon = ingredient.ingredientIcon
+                    newIngredient.emissionsPerKg = ingredient.emissionsPerKg
+                    newIngredient.standardPortionName = ingredient.standardPortionName
+                    newIngredient.standardPortionSizeKg = ingredient.standardPortionSizeKg
+                    //attributes that are editable
+                    newIngredient.emissions = gramsEmitted
+                    newIngredient.kilograms = kgSelected
+                    newIngredient.quantityName = quantityOptionsArray[2][quantityComponentRow]
+                    newIngredient.quantity = quantitySelected
+                    //set rows of pickerView
+                    newIngredient.pickerCompOneRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 0))
+                    newIngredient.pickerCompTwoRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 1))
+                    newIngredient.pickerCompThreeRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 2))
+                    
+                    //set relationship
+                    newIngredient.recipe = recipe
+                    
+                    //pop view controller back 2 VCs to AddRecipe VC
+                    let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
+                    self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true);
+                }
                 
+            }
+            
+            if let ingredientToEdit = ingredientToEdit {
                 //configure ingredient
-                //attributes that will not be editable
-                newIngredient.name = ingredient.ingredientName
-                newIngredient.icon = ingredient.ingredientIcon
-                newIngredient.emissionsPerKg = ingredient.emissionsPerKg
-                newIngredient.standardPortionName = ingredient.standardPortionName
-                newIngredient.standardPortionSizeKg = ingredient.standardPortionSizeKg
-                //attributes that are editable
-                newIngredient.emissions = gramsEmitted
-                newIngredient.kilograms = kgSelected
-                newIngredient.quantityName = quantityOptionsArray[2][quantityComponentRow]
-                newIngredient.quantity = quantitySelected
+                ingredientToEdit.emissions = gramsEmitted
+                ingredientToEdit.kilograms = kgSelected
+                ingredientToEdit.quantityName = quantityOptionsArray[2][quantityComponentRow]
+                ingredientToEdit.quantity = quantitySelected
                 //set rows of pickerView
-                newIngredient.pickerCompOneRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 0))
-                newIngredient.pickerCompTwoRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 1))
-                newIngredient.pickerCompThreeRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 2))
+                ingredientToEdit.pickerCompOneRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 0))
+                ingredientToEdit.pickerCompTwoRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 1))
+                ingredientToEdit.pickerCompThreeRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 2))
                 
-                //set relationship
-                newIngredient.recipe = recipe
-                
-                //pop view controller back 2 VCs to AddRecipe VC
+                //pop view controller back 1 VC to AddRecipe VC
                 let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
-                self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true);
+                self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
             }
             
         }
-        
-        if let ingredientToEdit = ingredientToEdit {
-            //configure ingredient
-            ingredientToEdit.emissions = gramsEmitted
-            ingredientToEdit.kilograms = kgSelected
-            ingredientToEdit.quantityName = quantityOptionsArray[2][quantityComponentRow]
-            ingredientToEdit.quantity = quantitySelected
-            //set rows of pickerView
-            ingredientToEdit.pickerCompOneRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 0))
-            ingredientToEdit.pickerCompTwoRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 1))
-            ingredientToEdit.pickerCompThreeRow = Int16(ingredientQuantityPicker.selectedRow(inComponent: 2))
-            
-            //pop view controller back 1 VC to AddRecipe VC
-            let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
-            self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
-        }
-        
-
         
     }
     
@@ -253,6 +258,15 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         
         return ingredientRating
         
+    }
+    
+    func unableToSaveAlert (title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in alert.dismiss(animated: true, completion: nil)} ))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     fileprivate func setUpQuantityOptionsArray() {
