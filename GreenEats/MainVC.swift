@@ -26,7 +26,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     let segmentSortChoice = 0
     
-    //MARK: - Side Menu Properties
+    //Side Menu Properties
     
     @IBOutlet weak var sideMenu: UIView!
     @IBOutlet weak var sideMenuLeadingConstraint: NSLayoutConstraint!
@@ -36,6 +36,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     var menuShowing = false
     
+    //Table view sorting button properties
+    
+    @IBOutlet weak var lowToHighBtn: UIButton!
+    @IBOutlet weak var aToZBtn: UIButton!
     
     //MARK: - Core Data Stack Properties
     
@@ -161,7 +165,43 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             break
         }
         
+        }
+    
+    @IBAction func sortLowToHighBtn(_ sender: Any) {
+        
+        //change button text colors
+        let selectedColor = UIColor(red:0.42, green:0.82, blue:0.52, alpha:1.0)
+        let deselectedColor = UIColor(red:0.79, green:0.79, blue:0.81, alpha:1.0)
+        lowToHighBtn.setTitleColor(selectedColor, for: .normal)
+        aToZBtn.setTitleColor(deselectedColor, for: .normal)
+        
+        //sort tableview
+        self.fetchedResultsController.fetchRequest.sortDescriptors = nil
+        fetchedResultsController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "emissions", ascending: false)]
+        self.fetchedResultsController.fetchRequest.sortDescriptors = nil
+        attemptFetch()
+        updateView()
+        
     }
+    
+    @IBAction func sortAToZBtn(_ sender: Any) {
+        
+        //change button text colors
+        let selectedColor = UIColor(red:0.42, green:0.82, blue:0.52, alpha:1.0)
+        let deselectedColor = UIColor(red:0.79, green:0.79, blue:0.81, alpha:1.0)
+        lowToHighBtn.setTitleColor(deselectedColor, for: .normal)
+        aToZBtn.setTitleColor(selectedColor, for: .normal)
+        
+        //sort tableview
+        self.fetchedResultsController.fetchRequest.sortDescriptors = nil
+        fetchedResultsController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        attemptFetch()
+        updateView()
+    }
+    
+    
+
+    
     
     @IBAction func selectSideMenu(_ sender: Any) {
         
