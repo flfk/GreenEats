@@ -32,8 +32,15 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //hide navigation controller top bar
-        self.navigationController?.navigationBar.isHidden = true
+        
+        //set searchController properties
+        searchController.hidesNavigationBarDuringPresentation = false
+        let greyColor = UIColor(red:0.97, green:0.95, blue:0.95, alpha:1.0)
+        let darkGreyColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1.0)
+        searchController.searchBar.barTintColor = greyColor
+        searchController.searchBar.tintColor = darkGreyColor
+        //searchController.searchBar.layer.borderColor = UIColor.clear.cgColor
+        searchController.searchBar.backgroundImage = UIImage(named: "searchBarBackground")
 
         //set delegate and datasource as self
         addIngredientTableView.dataSource = self
