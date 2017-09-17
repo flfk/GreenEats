@@ -18,7 +18,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     
     @IBOutlet weak var recipeTableView: UITableView!
-    @IBOutlet weak var recipeSortControl: UISegmentedControl!
     
     var newRecipe: Recipe?
     
@@ -150,27 +149,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     
     //MARK: - Actions
     
-    
-    @IBAction func recipeSortSgmtCntrl(_ sender: Any) {
-        
-        switch recipeSortControl.selectedSegmentIndex {
-        case 0:
-            self.fetchedResultsController.fetchRequest.sortDescriptors = nil
-            fetchedResultsController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "emissions", ascending: false)]
-            self.fetchedResultsController.fetchRequest.sortDescriptors = nil
-            attemptFetch()
-            updateView()
-        case 1:
-            self.fetchedResultsController.fetchRequest.sortDescriptors = nil
-            fetchedResultsController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-            attemptFetch()
-            updateView()
-        default:
-            break
-        }
-        
-        }
-    
     @IBAction func sortLowToHighBtn(_ sender: Any) {
         
         //change button text colors
@@ -279,8 +257,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         //configure cell contents
         cell.recipeNameLbl.text = recipe.name
         cell.recipeEmmissionsLbl.text = "\(Int(recipe.emissions))"
-        let imageName = recipe.rating! + "Small"
-        cell.recipeEmojiImg.image = UIImage(named: imageName)
+        //let imageName = recipe.rating! + "Small"
+        //cell.recipeEmojiImg.image = UIImage(named: imageName)
         
         //Set label to auto-adjust for longer names with mininum size of 12
         cell.recipeNameLbl.adjustsFontSizeToFitWidth = true

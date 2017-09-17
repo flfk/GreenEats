@@ -16,7 +16,7 @@ class SelectedIngredientCell: UITableViewCell {
     
     //MARK: - Properties
     
-    @IBOutlet weak var ingredientImg: UIImageView!
+    //@IBOutlet weak var ingredientImg: UIImageView!
     @IBOutlet weak var ingredientNameLbl: UILabel!
     @IBOutlet weak var ingredientQuantityLbl: UILabel!
     @IBOutlet weak var ingredientEmissionsLbl: UILabel!

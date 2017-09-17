@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GreenEats/MainVC.swift"
-            timestampString = "526111795.817844"
+            timestampString = "527301805.312737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -65,6 +65,84 @@
             endingLineNumber = "116"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GreenEats/SelectedIngredientCell.swift"
+            timestampString = "527301695.566452"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "SelectedIngredientCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GreenEats.SelectedIngredientCell.ingredientImg.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "GreenEats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/FelixKramer/Desktop/Coding/iOS/GreenEats/GreenEats/SelectedIngredientCell.swift"
+                  timestampString = "527301695.61991"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GreenEats.SelectedIngredientCell.ingredientImg.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "GreenEats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/FelixKramer/Desktop/Coding/iOS/GreenEats/GreenEats/SelectedIngredientCell.swift"
+                  timestampString = "527301695.662345"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GreenEats.SelectedIngredientCell.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; GreenEats.SelectedIngredientCell"
+                  moduleName = "GreenEats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/FelixKramer/Desktop/Coding/iOS/GreenEats/GreenEats/SelectedIngredientCell.swift"
+                  timestampString = "527301695.665236"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GreenEats.SelectedIngredientCell.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;GreenEats.SelectedIngredientCell&gt;"
+                  moduleName = "GreenEats"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/FelixKramer/Desktop/Coding/iOS/GreenEats/GreenEats/SelectedIngredientCell.swift"
+                  timestampString = "527301695.667862"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

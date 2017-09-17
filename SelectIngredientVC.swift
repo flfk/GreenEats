@@ -13,7 +13,7 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     //MARK: - Properties
     
-    @IBOutlet weak var ingredientImg: UIImageView!
+    //@IBOutlet weak var ingredientImg: UIImageView!
     @IBOutlet weak var ingredientNameLbl: UILabel!
     @IBOutlet weak var ingredientQuantityPicker: UIPickerView!
     @IBOutlet weak var ingredientRatingImg: UIImageView!
@@ -49,7 +49,7 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         //set up the views based on whether or not ingredient being added or edited
         if let ingredientToEdit = ingredientToEdit {
             ingredientNameLbl.text = ingredientToEdit.name
-            ingredientImg.image = UIImage(named: ingredientToEdit.icon!)
+            //ingredientImg.image = UIImage(named: ingredientToEdit.icon!)
             //prepopulate scroll view
             let pickerRowCompOne = Int(ingredientToEdit.pickerCompOneRow)
             let pickerRowCompTwo = Int(ingredientToEdit.pickerCompTwoRow)
@@ -59,7 +59,7 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             ingredientQuantityPicker.selectRow(pickerRowCompThree, inComponent: 2, animated: true)
         } else {
             ingredientNameLbl.text = ingredient?.ingredientName
-            ingredientImg.image = UIImage(named: (ingredient?.ingredientIcon)!)
+            //ingredientImg.image = UIImage(named: (ingredient?.ingredientIcon)!)
         }
        
     }

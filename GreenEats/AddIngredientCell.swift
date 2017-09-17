@@ -16,7 +16,7 @@ class AddIngredientCell: UITableViewCell {
     
     //MARK: - Properties
     
-    @IBOutlet weak var ingredientImg: UIImageView!
+    //@IBOutlet weak var ingredientImg: UIImageView!
     @IBOutlet weak var ingredientNameLbl: UILabel!
     
     //MARK: - Initialisation

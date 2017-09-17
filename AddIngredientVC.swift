@@ -133,7 +133,7 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
         
         cell.ingredientNameLbl.text = ingredient.ingredientName
-        cell.ingredientImg.image = UIImage(named: ingredient.ingredientIcon)
+        //cell.ingredientImg.image = UIImage(named: ingredient.ingredientIcon)
         
         return cell
     }

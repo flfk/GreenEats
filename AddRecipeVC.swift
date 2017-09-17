@@ -281,7 +281,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         cell.ingredientQuantityLbl.text = "\(roundedIngredientQuantity)" + " " + "\(ingredient.quantityName!)"
         let roundedEmissions = Int(ingredient.emissions)
         cell.ingredientEmissionsLbl.text = "\(roundedEmissions)"
-        cell.ingredientImg.image = UIImage(named: ingredient.icon!)
+        //cell.ingredientImg.image = UIImage(named: ingredient.icon!)
         
         //Set label to auto-adjust for longer names with mininum size of 12
         cell.ingredientNameLbl.adjustsFontSizeToFitWidth = true
