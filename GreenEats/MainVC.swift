@@ -214,6 +214,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
     }
     
+    @IBAction func contactUsBtn(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "mailto:GreenEatsApp@gmail.com")! as URL, options: [:], completionHandler: nil)
+    }
     
     
     
@@ -257,7 +260,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         //configure cell contents
         cell.recipeNameLbl.text = recipe.name
         cell.recipeEmmissionsLbl.text = "\(Int(recipe.emissions))"
-        let imageName = recipe.rating! + "Small"
+        let imageName = recipe.rating! + "Large"
         cell.recipeEmojiImg.image = UIImage(named: imageName)
         
         //Set label to auto-adjust for longer names with mininum size of 12

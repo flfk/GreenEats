@@ -12,8 +12,6 @@
 		447D1BA41F2C8B1E005F7C3F /* QuantityPickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D1BA31F2C8B1E005F7C3F /* QuantityPickerData.swift */; };
 		44F188CE1F5AAFD500E51D5C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F188CD1F5AAFD500E51D5C /* AboutVC.swift */; };
 		44F188D01F5AAFE500E51D5C /* TheScienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F188CF1F5AAFE500E51D5C /* TheScienceVC.swift */; };
-		44F188D21F5AAFF600E51D5C /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F188D11F5AAFF600E51D5C /* ContactVC.swift */; };
-		44F188D41F5AB00100E51D5C /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F188D31F5AB00100E51D5C /* ShareVC.swift */; };
 		44FE53481F233D9F00C5296F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE53471F233D9F00C5296F /* AppDelegate.swift */; };
 		44FE534A1F233D9F00C5296F /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE53491F233D9F00C5296F /* MainVC.swift */; };
 		44FE534D1F233D9F00C5296F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FE534B1F233D9F00C5296F /* Main.storyboard */; };
@@ -34,8 +32,6 @@
 		447D1BA31F2C8B1E005F7C3F /* QuantityPickerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityPickerData.swift; sourceTree = "<group>"; };
 		44F188CD1F5AAFD500E51D5C /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		44F188CF1F5AAFE500E51D5C /* TheScienceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheScienceVC.swift; sourceTree = "<group>"; };
-		44F188D11F5AAFF600E51D5C /* ContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
-		44F188D31F5AB00100E51D5C /* ShareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareVC.swift; sourceTree = "<group>"; };
 		44FE53441F233D9F00C5296F /* GreenEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FE53471F233D9F00C5296F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44FE53491F233D9F00C5296F /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainVC.swift; path = GreenEats/MainVC.swift; sourceTree = "<group>"; };
@@ -135,8 +131,6 @@
 				44FE53661F2429B500C5296F /* SelectIngredientVC.swift */,
 				44F188CD1F5AAFD500E51D5C /* AboutVC.swift */,
 				44F188CF1F5AAFE500E51D5C /* TheScienceVC.swift */,
-				44F188D11F5AAFF600E51D5C /* ContactVC.swift */,
-				44F188D31F5AB00100E51D5C /* ShareVC.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -219,13 +213,11 @@
 				44FE536B1F242F3D00C5296F /* AddIngredientCell.swift in Sources */,
 				447D1BA41F2C8B1E005F7C3F /* QuantityPickerData.swift in Sources */,
 				44F188D01F5AAFE500E51D5C /* TheScienceVC.swift in Sources */,
-				44F188D41F5AB00100E51D5C /* ShareVC.swift in Sources */,
 				44FE53691F242F2F00C5296F /* SelectedIngredientCell.swift in Sources */,
 				44FE53651F2429A600C5296F /* AddIngredientVC.swift in Sources */,
 				44F188CE1F5AAFD500E51D5C /* AboutVC.swift in Sources */,
 				44FE534A1F233D9F00C5296F /* MainVC.swift in Sources */,
 				44FE53481F233D9F00C5296F /* AppDelegate.swift in Sources */,
-				44F188D21F5AAFF600E51D5C /* ContactVC.swift in Sources */,
 				447D1B9F1F25519A005F7C3F /* IngredientClass.swift in Sources */,
 				44FE53621F24298700C5296F /* AddRecipeVC.swift in Sources */,
 				447D1BA11F2C785F005F7C3F /* IngredientData.swift in Sources */,
