@@ -257,8 +257,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         //configure cell contents
         cell.recipeNameLbl.text = recipe.name
         cell.recipeEmmissionsLbl.text = "\(Int(recipe.emissions))"
-        //let imageName = recipe.rating! + "Small"
-        //cell.recipeEmojiImg.image = UIImage(named: imageName)
+        let imageName = recipe.rating! + "Small"
+        cell.recipeEmojiImg.image = UIImage(named: imageName)
         
         //Set label to auto-adjust for longer names with mininum size of 12
         cell.recipeNameLbl.adjustsFontSizeToFitWidth = true

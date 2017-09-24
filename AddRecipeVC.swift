@@ -325,13 +325,15 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         let recipeEmissions = calculateRecipeEmissions()
         
-        if recipeEmissions < 1500 {
+        
+        //rating based on servings of beef/lamb, chicken, vegetarian
+        if recipeEmissions < 1000 {
           recipeRating = "1 - "
-        } else if recipeEmissions < 3000 {
+        } else if recipeEmissions < 1500 {
             recipeRating = "2 - "
-        } else if recipeEmissions < 5000 {
+        } else if recipeEmissions < 3000 {
             recipeRating = "3 - "
-        } else if recipeEmissions < 8000 {
+        } else if recipeEmissions < 4000 {
             recipeRating = "4 - "
         } else {
             recipeRating = "5 - "
