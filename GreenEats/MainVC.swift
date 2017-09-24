@@ -159,7 +159,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         //sort tableview
         self.fetchedResultsController.fetchRequest.sortDescriptors = nil
-        fetchedResultsController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "emissions", ascending: false)]
+        fetchedResultsController.fetchRequest.sortDescriptors = [NSSortDescriptor(key: "emissions", ascending: true)]
         self.fetchedResultsController.fetchRequest.sortDescriptors = nil
         attemptFetch()
         updateView()
