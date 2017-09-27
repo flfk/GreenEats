@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		447D1B9F1F25519A005F7C3F /* IngredientClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D1B9E1F25519A005F7C3F /* IngredientClass.swift */; };
 		447D1BA11F2C785F005F7C3F /* IngredientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D1BA01F2C785F005F7C3F /* IngredientData.swift */; };
-		447D1BA41F2C8B1E005F7C3F /* QuantityPickerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D1BA31F2C8B1E005F7C3F /* QuantityPickerData.swift */; };
 		44F188CE1F5AAFD500E51D5C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F188CD1F5AAFD500E51D5C /* AboutVC.swift */; };
 		44F188D01F5AAFE500E51D5C /* TheScienceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F188CF1F5AAFE500E51D5C /* TheScienceVC.swift */; };
 		44FE53481F233D9F00C5296F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE53471F233D9F00C5296F /* AppDelegate.swift */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		447D1B9E1F25519A005F7C3F /* IngredientClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientClass.swift; sourceTree = "<group>"; };
 		447D1BA01F2C785F005F7C3F /* IngredientData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientData.swift; sourceTree = "<group>"; };
-		447D1BA31F2C8B1E005F7C3F /* QuantityPickerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityPickerData.swift; sourceTree = "<group>"; };
 		44F188CD1F5AAFD500E51D5C /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		44F188CF1F5AAFE500E51D5C /* TheScienceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheScienceVC.swift; sourceTree = "<group>"; };
 		44FE53441F233D9F00C5296F /* GreenEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,7 +102,6 @@
 				447D1B9E1F25519A005F7C3F /* IngredientClass.swift */,
 				44FE535C1F2345FE00C5296F /* RecipeCell.swift */,
 				447D1BA01F2C785F005F7C3F /* IngredientData.swift */,
-				447D1BA31F2C8B1E005F7C3F /* QuantityPickerData.swift */,
 				44FE53681F242F2F00C5296F /* SelectedIngredientCell.swift */,
 				44FE536A1F242F3D00C5296F /* AddIngredientCell.swift */,
 			);
@@ -211,7 +208,6 @@
 			files = (
 				44FE535D1F2345FE00C5296F /* RecipeCell.swift in Sources */,
 				44FE536B1F242F3D00C5296F /* AddIngredientCell.swift in Sources */,
-				447D1BA41F2C8B1E005F7C3F /* QuantityPickerData.swift in Sources */,
 				44F188D01F5AAFE500E51D5C /* TheScienceVC.swift in Sources */,
 				44FE53691F242F2F00C5296F /* SelectedIngredientCell.swift in Sources */,
 				44FE53651F2429A600C5296F /* AddIngredientVC.swift in Sources */,
