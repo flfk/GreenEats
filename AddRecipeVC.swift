@@ -222,14 +222,18 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
     //applicationDidEnterBackground is used to save the data when the application enters the background
     
     func applicationDidEnterBackground(_ notification: Notification) {
-        do {
-            try adManagedObjectContext.save()
-        } catch {
-            print("Unable to Save Changes")
-            print("\(error), \(error.localizedDescription)")
-        }
         
-        print("Managed Object Context saved to persitent container")
+        //test if recipe name textfield is empty
+        if recipeNameTxtFld.text != "" {
+            do {
+                try adManagedObjectContext.save()
+            } catch {
+                print("Unable to Save Changes")
+                print("\(error), \(error.localizedDescription)")
+            }
+            
+            print("Managed Object Context saved to persitent container")
+        } 
     }
     
     //MARK: - Helper Methods

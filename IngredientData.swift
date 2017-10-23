@@ -159,7 +159,7 @@ class Data {
         data.append(IngredientClass(ingredientName: "Pomegranate", ingredientIcon: "", emissionsPerKg: 0.440924, standardPortionName: "each", standardPortionSizeKg: 0.26))
         data.append(IngredientClass(ingredientName: "Pork", ingredientIcon: "", emissionsPerKg: 5.4674576, standardPortionName: "chops", standardPortionSizeKg: 0.16))
         data.append(IngredientClass(ingredientName: "Potato Chips", ingredientIcon: "", emissionsPerKg: 3.4392072, standardPortionName: "packet", standardPortionSizeKg: 0.15))
-        data.append(IngredientClass(ingredientName: "Potatoe", ingredientIcon: "", emissionsPerKg: 0.330693, standardPortionName: "each", standardPortionSizeKg: 0.15))
+        data.append(IngredientClass(ingredientName: "Potato", ingredientIcon: "", emissionsPerKg: 0.330693, standardPortionName: "each", standardPortionSizeKg: 0.15))
         data.append(IngredientClass(ingredientName: "Prawn", ingredientIcon: "prawn", emissionsPerKg: 4.5856096, standardPortionName: "each", standardPortionSizeKg: 0.006))
         data.append(IngredientClass(ingredientName: "Prune", ingredientIcon: "", emissionsPerKg: 0.5070626, standardPortionName: "each", standardPortionSizeKg: 0.015))
         data.append(IngredientClass(ingredientName: "Pummelo", ingredientIcon: "", emissionsPerKg: 0.220462, standardPortionName: "each", standardPortionSizeKg: 0.2))

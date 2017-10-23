@@ -120,6 +120,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             //configure the newRecipe creation date
             newRecipe.createdAt = "\(Date())"
             newRecipe.rating = "1 - "
+            //set a defaultname so as not to crash the app if no name updated
+            newRecipe.name = ""
+            newRecipe.emissions = 0.0
+            newRecipe.servings = 1.0
             //send the new recipe to the AddRecipe view controller
             destinationViewController.recipe = newRecipe
             destinationViewController.servingSize = 1
