@@ -86,6 +86,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
 
         //ensure additional menu bar button item in original form
         //additionalMenuBtn.image = UIImage(named: "additionalMenuSmall")?.withRenderingMode(.alwaysOriginal)
+        
+        print("\(fetchedResultsController.fetchedObjects)")
     }
     
     //MARK: - View Will Appear
@@ -98,6 +100,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         sideMenuLeadingConstraint.constant = -230
         sideMenu.layer.shadowOpacity = 0.8
         closeSideMenuBtnLeadingConstraint.constant = -550
+        
     }
     
     //MARK: - Navigation
@@ -324,6 +327,12 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let recipe = fetchedResultsController.object(at: indexPath as IndexPath)
+        print("\(recipe.emissions)")
+    }
+    
     
     //MARK: - NS Fetched Results Controller Delegate Functions
 

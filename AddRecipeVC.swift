@@ -105,6 +105,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         //add view controller as an observer so that when the app enters the background data is saved
         NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
         
+        //add a textfield observer so you know when the name is edited
+        recipeNameTxtFld.addTarget(self, action: "textFieldDidChange", for: UIControlEvents.editingChanged)
+        
         
     }
     
@@ -135,6 +138,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
             let roundedServingSize = Int(servingSize!)
             servingSizeLbl.text = "\(roundedServingSize)"
             
+            //update the recipe data
+            recipe?.servings = servingSize!
+            
             updateView()
         }
         
@@ -149,6 +155,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
             servingSize = servingSize! + 1
             let roundedServingSize = Int(servingSize!)
             servingSizeLbl.text = "\(roundedServingSize)"
+            
+            //update the recipe data
+            recipe?.servings = servingSize!
             
             updateView()
         }
@@ -321,6 +330,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         let emissionsPerServe = recipeEmissions / servingSize!
         
+        //update the recipe total emissions
+        recipe?.emissions = emissionsPerServe
+        
         return emissionsPerServe
     }
     
@@ -342,6 +354,9 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         } else {
             recipeRating = "5 - "
         }
+        
+        //update the recipe data
+        recipe?.rating = recipeRating
         
         return recipeRating
     }
@@ -369,6 +384,11 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         }))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    //call this method when the text field observer notices changes to update the recipe name data
+    func textFieldDidChange() {
+        recipe?.name = recipeNameTxtFld.text
     }
     
     //MARK: - Table View DataSource Protocol Functions
