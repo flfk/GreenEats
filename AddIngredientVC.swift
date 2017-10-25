@@ -142,6 +142,11 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         return 50
     }
     
+    //when table view scrolled end editing in search bar to remove keyboard
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        searchController.searchBar.endEditing(true)
+    }
+    
 }
 
 //MARK: - UISearchControllerUpdating
