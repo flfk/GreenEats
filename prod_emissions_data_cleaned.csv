@@ -1,0 +1,207 @@
+Food Category,Product,Icon name,Kg of CO2e/pound of product produced,Kg of CO2e/kg of product produced,StandardPortionName,StandardPortionSize (kg)
+Nuts/Seeds,Almonds,,0.86,1.8959732,each,0.0012
+Nuts/Seeds,"Almonds, organic",,1.62,3.5714844,each,0.0012
+Fruits/Berries,Apples,apple,0.11,0.2425082,each,0.185
+Fruits/Berries,Apricots,,0.1,0.220462,each,0.035
+Seafood,Arctic Char,fish,8.36,18.4306232,fillet,0.17
+Vegetables,Artichokes,artichoke,0.12,0.2645544,each,0.13
+Vegetables,Asparagus,asparagus,0.4,0.881848,spears,0.03
+Seafood,Cod,fish,2.39,5.2690418,fillet,0.17
+Seafood,Salmon,fish,2.3,5.070626,fillet,0.17
+Fruits/Berries,Bananas,banana,0.12,0.2645544,each,0.18
+Grains,Barley,,0.14,0.3086468,cup,0.15
+Grains,"Barley, organic",,0.25,0.551155,cup,0.15
+Beans/Pulses,"Beans, Blackeye",beans,0.26,0.5732012,can,0.4
+Vegetables,"Beans, Chinese Long Bean",beans,0.12,0.2645544,cup,0.09
+Beans/Pulses,"Beans, Dry Beans",beans,0.36,0.7936632,cup,0.2
+Vegetables,"Beans, Green",beans,0.2,0.440924,each,0.4
+Beans/Pulses,"Beans, Lima",beans,0.34,0.7495708,each,0.4
+Vegetables,"Beans, Snap Beans",beans,0.11,0.2425082,each,0.4
+Meat/Poultry,Beef,steak,8,17.63696,steak,0.25
+Processed Foods,Beer,,0.17,0.3747854,pint,0.5
+Root Crops,Sugarbeets,,0.02,0.0440924,each,0.75
+Vegetables,Bitter melon,,0.05,0.110231,each,0.13
+Fruits/Berries,Raspberries,raspberry,0.26,0.5732012,each,0.0035
+Fruits/Berries,Blackberries,raspberry,0.13,0.2866006,each,0.0035
+Fruits/Berries,Blueberries,raspberry,0.38,0.8377556,each,0.0035
+Fruits/Berries,Boysenberries,raspberry,0.09,0.1984158,each,0.0035
+Processed Foods,Bread Flour,bread,0.25,0.551155,cup,0.15
+Vegetables,Broccoli,broccoli,0.16,0.3527392,bunch,0.6
+Vegetables,Brussels Sprouts,,0.12,0.2645544,each,0.01
+Dairy,Butter,butter,0.53,1.1684486,tablespoon,0.015
+Vegetables,Cabbage,lettuce,0.06,0.1322772,head,0.9
+Vegetables,"Cabbage, chinese",lettuce,0.04,0.0881848,head,0.84
+Nuts/Seeds,Canola Seeds,,0.39,0.8598018,cup,0.16
+Fruits/Berries,Cantaloupe,,0.06,0.1322772,each,1.5
+Root Crops,Carrots,carrot,0.05,0.110231,each,0.8
+Seafood,Catfish,fish,4.25,9.369635,fillet,0.12
+Vegetables,Cauliflower,,0.14,0.3086468,head,0.9
+Vegetables,Celery,,0.05,0.110231,stalks,0.5
+Dairy,"Cheese, cottage",cheese,0.12,0.2645544,tablespoon,0.02
+Dairy,"Cheese, natural",cheese,0.12,0.2645544,slices,0.03
+Dairy,Cream Cheese,,0.12,0.2645544,tablespoon,0.02
+Dairy,Haloumi,,0.12,0.2645544,serving,0.05
+Dairy,"Cheese, American",cheese,4.47,9.8546514,slices,0.03
+Dairy,"Cheese, Tasty",cheese,4.47,9.8546514,slices,0.03
+Fruits/Berries,Cherries,cherry,0.11,0.2425082,each,0.55
+Meat/Poultry,"Chicken, caged",roast-chicken,1.7,3.747854,breast,0.2
+Meat/Poultry,"Chicken, free-range",roast-chicken,2.54,5.5997348,breast,0.2
+Herbs,Coriander,,0.09,0.1984158,sprigs,0.002
+Herbs,Cilantro,,0.09,0.1984158,sprigs,0.002
+Miscellaneous Food Crops,Cocoa Beans,,0.26,0.5732012,cup,0.15
+Processed Foods,Cocoa Butter,,0.52,1.1464024,tablespoon,0.02
+Processed Foods,Cocoa Liquor,,0.37,0.8157094,tablespoon,0.015
+Processed Foods,Cocoa Powder,,0.09,0.1984158,tablespoon,0.008
+Processed Foods,Coffee,,1.14,2.5132668,each,0.24
+Seafood,Carp,fish,4.34,9.5680508,fillet,0.17
+Processed Foods,Cooking/Salad Oil,olive-oil,0.79,1.7416498,tablespoon,0.015
+Processed Foods,Corn Oil,olive-oil,0.12,0.2645544,tablespoon,0.015
+Processed Foods,Corn Syrup,honey,0.15,0.330693,tablespoon,0.015
+Grains,Sweet Corn,,0.16,0.3527392,cobs,0.2
+Dairy,Sour Cream,milk-1,0.1,0.220462,tablespoon,0.02
+Dairy,Whipped Cream,milk-1,0.07,0.1543234,tablespoon,0.01
+Vegetables,Cucumbers,,0.06,0.1322772,each,0.16
+Vegetables,"Cucurbits, Moqua/Opo",,0.03,0.0661386,each,0.16
+Vegetables,"Cucurbits, Sinqua",,0.04,0.0881848,each,0.16
+Root Crops,Radish,radish,0.07,0.1543234,each,0.005
+Fruits/Berries,Dates,,0.2,0.440924,each,0.024
+Vegetables,Aubergine,aubergine,0.23,0.5070626,each,0.45
+Vegetables,Eggplants,aubergine,0.23,0.5070626,each,0.45
+Vegetables,"Eggplants, Asian Style",aubergine,0.04,0.0881848,each,0.45
+Meat/Poultry,Eggs,fried-egg,0.92,2.0282504,each,0.06
+Fruits/Berries,Figs,,0.7,1.543234,each,0.024
+Seafood,Flatfish,fish,1.39,3.0644218,fillet,0.17
+Processed Foods,Flour,,0.29,0.6393398,cup,0.12
+Beans/Pulses,Chickpeas,,0.29,0.6393398,can,0.4
+Vegetables,Garlic,garlic,0.43,0.9479866,clove,0.005
+Fruits/Berries,Grapes,grape,0.38,0.8377556,grapes,0.005
+Fruits/Berries,Raisins,,0.14,0.3086468,each,0.0005
+Fruits/Berries,Guava,,0.07,0.1543234,each,0.06
+Processed Foods,Ham,,4.23,9.3255426,slices,0.02
+Processed Foods,Hash Brown,,1.8,3.968316,each,0.06
+Seafood,Herring,fish,0.56,1.2345872,fillet,0.17
+Processed Foods,Ice Cream,ice-cream,0.83,1.8298346,scoops,0.07
+Meat/Poultry,Lamb,,11.31,24.9342522,chops,0.03
+Vegetables,Lemongrass,,0.03,0.0661386,sprigs,0.002
+Fruits/Berries,Lemons,lemon,0.04,0.0881848,each,0.06
+Beans/Pulses,Quinoa,,0.24,0.5291088,cup,0.15
+Beans/Pulses,Lentils,,0.24,0.5291088,cup,0.2
+Vegetables,Lettuce,lettuce,0.04,0.0881848,head,0.9
+Processed Foods,Liquid Eggs,,0.98,2.1605276,each,0.15
+Processed Foods,Noodles,noodles,0.56,1.2345872,cup,0.15
+Processed Foods,Spaghetti,pasta,0.56,1.2345872,cup,0.15
+Processed Foods,Pasta,pasta,0.56,1.2345872,cup,0.15
+Seafood,Mackerel,fish,0.87,1.9180194,fillet,0.17
+Processed Foods,Malt Whisky,,1.24,2.7337288,shot,0.03
+Fruits/Berries,Mandarin Oranges,orange,0.1,0.220462,each,0.09
+Fruits/Berries,Mango,,0.03,0.0661386,each,0.55
+Processed Foods,Margarine,,0.8,1.763696,tablespoon,0.02
+Processed Foods,Marinara Sauce,,0.38,0.8377556,cup,0.24
+Processed Foods,Instant Mashed Potatoes,,2.05,4.519471,packet,0.12
+Processed Foods,Wine,,0.2,0.440924,glass,0.28
+Fruits/Berries,Melons,,0.06,0.1322772,each,0.55
+Dairy,"Milk, condensed",,1.14,2.5132668,can,0.27
+Dairy,"Milk, evaporated",,1.14,2.5132668,can,0.27
+Dairy,"Milk, powdered",,4.42,9.7444204,cup,0.2
+Dairy,"Milk, low-fat",milk-1,0.36,0.7936632,glass,0.25
+Dairy,"Milk, full cream",milk-1,0.46,1.0141252,each,0.25
+Seafood,Mullet,fish,2.41,5.3131342,fillet,0.1
+Vegetables,Mushrooms,mushroom,0,0,each,0.02
+Seafood,Mussels,mussel,0.24,0.5291088,each,0.035
+Fruits/Berries,Nectarines,orange,0.1,0.220462,each,0.15
+Seafood,Lobster,prawn,2.44,5.3792728,each,0.85
+Processed Foods,Oat Bran,,0.22,0.4850164,cup,0.1
+Processed Foods,Oats,,0.22,0.4850164,cup,0.09
+Vegetables,Okra,,0.11,0.2425082,each,0.02
+Fruits/Berries,Olives,olives,0.13,0.2866006,each,0.011
+Vegetables,Onions,onion,0.04,0.0881848,each,0.11
+Processed Foods,Orange Juice,orange,0.97,2.1384814,glass,0.24
+Fruits/Berries,Blood Oranges,orange,0.08,0.1763696,each,0.14
+Fruits/Berries,Oranges,orange,0.06,0.1322772,each,0.14
+Seafood,Oysters,mussel,5.19,11.4419778,each,0.015
+Oils,Palm Kernel Oil,olive-oil,0.41,0.9038942,tablespoon,0.015
+Nuts/Seeds,Palm Kernels,,0.15,0.330693,cup,0.15
+Oils,Palm Oil,olive-oil,0.2,0.440924,tablespoon,0.015
+Vegetables,Parsley,,0.07,0.1543234,sprigs,0.002
+Processed Foods,Vegetable Oil,olive-oil,0.81,1.7857422,tablespoon,0.015
+Processed Foods,Pastry Flour,,0.24,0.5291088,cup,0.12
+Fruits/Berries,Peaches,,0.1,0.220462,each,0.15
+Processed Foods,Peanut Butter,,0.69,1.5211878,teaspoon,0.005
+Oils,Peanut Oil,olive-oil,1.77,3.9021774,tablespoon,0.015
+Root Crops,Peanuts,,0.26,0.5732012,each,0.0005
+Fruits/Berries,Pears,,0.15,0.330693,each,0.06
+Vegetables,Peas,beans,0.13,0.2866006,can,0.425
+Nuts/Seeds,Pecans,,0.73,1.6093726,each,0.0015
+Herbs,Peppermint,,20.42,45.0183404,sprigs,0.002
+Processed Foods,Pepperoni,,5.93,13.0733966,slices,0.005
+Vegetables,Bell Peppers,,0.12,0.2645544,each,0.17
+Fruits/Berries,Pineapple,pineapple,0.04,0.0881848,each,0.9
+Nuts/Seeds,Pistachios,,0.51,1.1243562,each,0.0005
+Processed Foods,Pita Bread,,0.38,0.8377556,each,0.06
+Processed Foods,Pizza Dough,,0.33,0.7275246,ball,0.25
+Fruits/Berries,Plums,,0.1,0.220462,each,0.08
+Fruits/Berries,Pomegranates,,0.2,0.440924,each,0.26
+Meat/Poultry,Bacon,,2.48,5.4674576,rashers,0.025
+Meat/Poultry,Pork,,2.48,5.4674576,chops,0.16
+Processed Foods,Potato Chips,,1.56,3.4392072,packet,0.15
+Tubers,Potatoes,,0.15,0.330693,each,0.15
+Fruits/Berries,Prunes,,0.23,0.5070626,each,0.015
+Fruits/Berries,Pummelos,,0.1,0.220462,each,0.2
+Vegetables,Butternut Pumpkin,pumpkin,0.07,0.1543234,each,1.3
+Vegetables,Pumpkins,pumpkin,0.07,0.1543234,each,4
+Nuts/Seeds,Rapeseed,,0.4,0.881848,cup,0.15
+Oils,Canola Oil,olive-oil,0.77,1.6975574,tablespoon,0.015
+Fruits/Berries,Raspberries,raspberry,0.12,0.2645544,each,0.004
+Grains,Rice Bran,,0.21,0.4629702,cup,0.15
+Grains,"Rice, brown",rice,0.98,2.1605276,cup,0.2
+Grains,"Rice, white",rice,1.07,2.3589434,cup,0.2
+Grains,"Rice, wild , brown",,5.06,11.1553772,cup,0.2
+Grains,"Rice, wild, white",,5.51,12.1474562,cup,0.2
+Grains,Rye Grain,,0.11,0.2425082,cup,0.15
+Processed Foods,Salt,salt,0.1,0.220462,teaspoon,0.005
+Processed Foods,Sausages,,4.25,9.369635,each,0.08
+Seafood,Sea Bass,fish,4.73,10.4278526,fillet,0.17
+Seafood,Shrimp,prawn,3.2,7.054784,each,0.006
+Seafood,Prawn,prawn,2.08,4.5856096,each,0.006
+Seafood,Silver Carp,fish,4.34,9.5680508,fillet,0.17
+Processed Foods,Coca cola,,0.78,1.7196036,can,0.35
+Processed Foods,Pepsi,,0.78,1.7196036,can,0.35
+Processed Foods,Soft Drinks,,0.78,1.7196036,can,0.35
+Grains,Sorghum,,0.13,0.2866006,cup,0.15
+Processed Foods,Soybean Meal,,0.3,0.661386,cup,0.15
+Oils,Soybean Oil,olive-oil,0.67,1.4770954,tablespoon,0.015
+Beans/Pulses,Soybeans,beans,0.25,0.551155,cup,0.15
+Processed Foods,Soymilk,milk-1,0.31,0.6834322,cup,0.24
+Vegetables,Spinach,lettuce,0.15,0.330693,bunch,0.25
+Vegetables,Squash,,0.16,0.3527392,each,1.3
+Fruits/Berries,Strawberries,strawberry,0.12,0.2645544,each,0.012
+Processed Foods,"Sugar, raw",,1.37,3.0203294,teaspoon,0.004
+Processed Foods,Sugar,,1.79,3.9462698,teaspoon,0.004
+Miscellaneous Food Crops,Sugarcane,,0.02,0.0440924,stalks,1.4
+Oils,Sunflower Oil,olive-oil,0.67,1.4770954,tablespoon,0.015
+Nuts/Seeds,Sunflower Seed,,0.4,0.881848,cup,0.15
+Tubers,Sweet Potatoes,,0.19,0.4188778,each,0.17
+Seafood,Tilapia,fish,4.79,10.5601298,fillet,0.17
+Processed Foods,Breakfast Cereal,,0.98,2.1605276,bowl,0.08
+Processed Foods,Tofu,,0.32,0.7054784,packet,0.25
+Processed Foods,Tomato Sauce,,1.02,2.2487124,each,0.35
+Processed Foods,Ketchup,tomato,1.02,2.2487124,tablespoon,0.015
+Processed Foods,Tomato Paste,tomato,0.83,1.8298346,tablespoon,0.017
+Vegetables,Tomatoes,tomato,0.11,0.2425082,each,0.12
+Vegetables,"Tomatoes, Cherry",tomato,0.03,0.0661386,each,0.017
+Seafood,Trout,fish,2.01,4.4312862,fillet,0.17
+Seafood,"Tuna, canned",tuna,1.85,4.078547,can,0.09
+Seafood,Tuna,fish,1.56,3.4392072,fillet,0.17
+Meat/Poultry,Turkey,roast-chicken,2.12,4.6737944,breast,2.7
+Nuts/Seeds,Walnuts,,0.35,0.771617,each,0.02
+Processed Foods,Wheat Bran,,0.25,0.551155,cup,0.15
+Processed Foods,Bread,bread,0.38,0.8377556,slices,0.04
+Processed Foods,Wheat Germ,,0.25,0.551155,cup,0.15
+Grains,Wheat,,0.16,0.3527392,cup,0.15
+Dairy,Whey Powder,,0.92,2.0282504,cup,0.05
+Processed Foods,"Wheat, whole",,0.25,0.551155,cup,0.15
+Processed Foods,"Spaghetti, whole wheat",pasta,0.48,1.0582176,cup,0.15
+Processed Foods,"Noodles, whole wheat",noodles,0.48,1.0582176,cup,0.15
+Processed Foods,"Pasta, whole wheat",pasta,0.48,1.0582176,cup,0.15
+Grains,Mustard,,0.45,0.992079,tablespoon,0.015
+Dairy,Yogurt,yogurt,0.41,0.9038942,cup,0.245

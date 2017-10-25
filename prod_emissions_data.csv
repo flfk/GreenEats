@@ -1,0 +1,292 @@
+Food Category,Product,Kg of CO2e/pound of product produced,Kg of CO2e/kg of product produced,StandardPortionName,StandardPortionSize (kg)
+Nuts/Seeds,Almonds,0.86,1.8959732,each,0.1
+Nuts/Seeds,"Almonds, organic",1.62,3.5714844,each,0.1
+Fruits/Berries,Apples,0.11,0.2425082,each,0.1
+Fruits/Berries,"Apples, Fuji (premium)",0.12,0.2645544,each,0.1
+Fruits/Berries,"Apples, Fuji (standard)",0.08,0.1763696,each,0.1
+Fruits/Berries,"Apples, Granny Smith",0.05,0.110231,each,0.1
+Fruits/Berries,"Apples, organic",0.09,0.1984158,each,0.1
+Fruits/Berries,Apricots,0.1,0.220462,each,0.1
+Seafood,"Arctic Char, farmed, filleted",8.36,18.4306232,each,0.1
+Vegetables,Artichokes,0.12,0.2645544,each,0.1
+Vegetables,Asparagus,0.4,0.881848,each,0.1
+Seafood,Atlantic Cod,2.39,5.2690418,each,0.1
+Seafood,"Atlantic Salmon, farmed",1.31,2.8880522,each,0.1
+Seafood,"Atlantic Salmon, farmed, filleted",2.3,5.070626,each,0.1
+Fruits/Berries,Bananas,0.12,0.2645544,each,0.1
+Grains,"Barley, Malting Barley",0.14,0.3086468,each,0.1
+Grains,"Barley, winter barley, organic",0.25,0.551155,each,0.1
+Beans/Pulses,"Beans, Baby Lima",0.29,0.6393398,each,0.1
+Beans/Pulses,"Beans, Blackeye",0.26,0.5732012,each,0.1
+Vegetables,"Beans, Chinese Long Bean",0.12,0.2645544,each,0.1
+Beans/Pulses,"Beans, common dry varieties",0.43,0.9479866,each,0.1
+Beans/Pulses,"Beans, Dry Beans",0.36,0.7936632,each,0.1
+Beans/Pulses,"Beans, Dry Beans, organic",0.24,0.5291088,each,0.1
+Vegetables,"Beans, Green, Blue Lake Variety",0.2,0.440924,each,0.1
+Beans/Pulses,"Beans, Large Lima",0.52,1.1464024,each,0.1
+Beans/Pulses,"Beans, Lima/Blackeye",0.34,0.7495708,each,0.1
+Vegetables,"Beans, Snap Beans",0.11,0.2425082,each,0.1
+Meat/Poultry,"Beef Meat, pasture-fed",7.48,16.4905576,each,0.1
+Meat/Poultry,"Beef Meat, ration-fed",8,17.63696,each,0.1
+Processed Foods,Beer,0.17,0.3747854,each,0.1
+Root Crops,"Beets, Sugarbeets",0.02,0.0440924,each,0.1
+Vegetables,Bittermelon,0.05,0.110231,each,0.1
+Fruits/Berries,Black Raspberry,0.26,0.5732012,each,0.1
+Fruits/Berries,Blackberries,0.13,0.2866006,each,0.1
+Fruits/Berries,"Blueberries, Highbush",0.38,0.8377556,each,0.1
+Fruits/Berries,"Blueberries, Highbush, organic",0.33,0.7275246,each,0.1
+Fruits/Berries,Boysenberries,0.09,0.1984158,each,0.1
+Processed Foods,Bread Flour,0.25,0.551155,each,0.1
+Vegetables,Broccoli,0.16,0.3527392,each,0.1
+Vegetables,"Broccoli, organic",0.19,0.4188778,each,0.1
+Vegetables,Brussels Sprouts,0.12,0.2645544,each,0.1
+Dairy,Butter,0.53,1.1684486,each,0.1
+Vegetables,Cabbage,0.06,0.1322772,each,0.1
+Vegetables,"Cabbage, chinese",0.04,0.0881848,each,0.1
+Nuts/Seeds,"Canola, Spring Canola",0.39,0.8598018,each,0.1
+Fruits/Berries,Cantaloupe,0.06,0.1322772,each,0.1
+Root Crops,Carrots,0.05,0.110231,each,0.1
+Seafood,"Catfish, farmed, farmed",2.14,4.7178868,each,0.1
+Seafood,"Catfish, farmed, farmed, filleted",4.25,9.369635,each,0.1
+Vegetables,Cauliflower,0.14,0.3086468,each,0.1
+Vegetables,Celery,0.05,0.110231,each,0.1
+Dairy,"Cheese, cottage",0.12,0.2645544,each,0.1
+Dairy,"Cheese, natural",0.12,0.2645544,each,0.1
+Dairy,"Cheese, processed",4.47,9.8546514,each,0.1
+Fruits/Berries,Cherries,0.11,0.2425082,each,0.1
+Fruits/Berries,"Cherries, Sweet Cherries",0.36,0.7936632,each,0.1
+Meat/Poultry,"Chicken Meat (broiler), large-scale, confinement",1.7,3.747854,each,0.1
+Meat/Poultry,"Chicken Meat (broiler), small-scale, free-range",2.54,5.5997348,each,0.1
+Herbs,Cilantro,0.09,0.1984158,each,0.1
+Miscellaneous Food Crops,Cocoa Beans,0.26,0.5732012,each,0.1
+Processed Foods,Cocoa Butter,0.52,1.1464024,each,0.1
+Processed Foods,Cocoa Cake,0.06,0.1322772,each,0.1
+Processed Foods,Cocoa Liquor (unsweetened chocolate liquid),0.37,0.8157094,each,0.1
+Processed Foods,Cocoa Powder,0.09,0.1984158,each,0.1
+Processed Foods,Coffee,1.14,2.5132668,each,0.1
+Miscellaneous Food Crops,"Coffee Beans, green",0.75,1.653465,each,0.1
+Seafood,"Common Carp, farmed",2.41,5.3131342,each,0.1
+Seafood,"Common Carp, farmed, filleted",4.34,9.5680508,each,0.1
+Processed Foods,Cooking/Salad Oil,0.79,1.7416498,each,0.1
+Grains,Corn,0.27,0.5952474,each,0.1
+Grains,Corn,0.27,0.5952474,each,0.1
+Processed Foods,Corn Feed,0.07,0.1543234,each,0.1
+Processed Foods,Corn Oil,0.12,0.2645544,each,0.1
+Processed Foods,Corn Syrup,0.15,0.330693,each,0.1
+Grains,"Corn, organic",0.2,0.440924,each,0.1
+Grains,"Corn, Sweet Corn",0.16,0.3527392,each,0.1
+Dairy,"Cream, sour",0.1,0.220462,each,0.1
+Dairy,"Cream, whipped fluid",0.07,0.1543234,each,0.1
+Vegetables,Cucumbers,0.06,0.1322772,each,0.1
+Vegetables,"Cucurbits, Moqua/Opo",0.03,0.0661386,each,0.1
+Vegetables,"Cucurbits, Sinqua",0.04,0.0881848,each,0.1
+Root Crops,Daikon Radish,0.07,0.1543234,each,0.1
+Fruits/Berries,"Dates, Deglet Noor (Grade B, US Choice)",0.2,0.440924,each,0.1
+Fruits/Berries,"Dates, Deglet Noor (Grade C, US Standard)",0.08,0.1763696,each,0.1
+Vegetables,"Eggplants, American Style",0.23,0.5070626,each,0.1
+Vegetables,"Eggplants, Asian Style",0.04,0.0881848,each,0.1
+Meat/Poultry,"Eggs (Grade A, X Large, Jumbo, and Medium), large-scale, free-range",0.92,2.0282504,each,0.1
+Meat/Poultry,"Eggs (Grade A, X Large, Jumbo, and Medium), large-scale, free-range, commercial ration",1.08,2.3809896,each,0.1
+Meat/Poultry,"Eggs (Jumbo, X-Large, Large, Medium, Small), large-scale, confinement, commercial ration",0.84,1.8518808,each,0.1
+Meat/Poultry,"Eggs (X-Large, Jumbo, Large, and Medium), small-scale, free-range",0.86,1.8959732,each,0.1
+Fruits/Berries,Figs,0.7,1.543234,each,0.1
+Fruits/Berries,"Figs, Black Mission",0.31,0.6834322,each,0.1
+Seafood,Flatfish,2.72,5.9965664,each,0.1
+Seafood,"Flatfish, filleted",1.39,3.0644218,each,0.1
+Processed Foods,Flour,0.29,0.6393398,each,0.1
+Processed Foods,Frozen Orange Juice,3.62,7.9807244,each,0.1
+Beans/Pulses,Garbanzos (chick-peas),0.29,0.6393398,each,0.1
+Vegetables,Garlic,0.43,0.9479866,each,0.1
+Fruits/Berries,Grapes,0.38,0.8377556,each,0.1
+Fruits/Berries,"Grapes, Cabernet Sauvignon, for wine",0.1,0.220462,each,0.1
+Fruits/Berries,"Grapes, Chardonnay, for wine",0.12,0.2645544,each,0.1
+Fruits/Berries,"Grapes, Chardonnay, for wine, organic",0.11,0.2425082,each,0.1
+Fruits/Berries,"Grapes, Crimson Seedless",0.09,0.1984158,each,0.1
+Fruits/Berries,"Grapes, Flame Seedless",0.11,0.2425082,each,0.1
+Fruits/Berries,"Grapes, for raisins",0.14,0.3086468,each,0.1
+Fruits/Berries,"Grapes, French Hybrids, for wine",0.22,0.4850164,each,0.1
+Fruits/Berries,"Grapes, Redglobe",0.08,0.1763696,each,0.1
+Fruits/Berries,"Grapes, Sauvignon Blanc, for wine",0.07,0.1543234,each,0.1
+Fruits/Berries,"Grapes, Spur Pruned Varieties",0.03,0.0661386,each,0.1
+Fruits/Berries,"Grapes, Thompson Seedless",0.09,0.1984158,each,0.1
+Fruits/Berries,"Grapes, Thompson Seedless/Fiesta, organic",0.32,0.7054784,each,0.1
+Fruits/Berries,"Guava, Tropical Pink",0.07,0.1543234,each,0.1
+Processed Foods,Hams,4.23,9.3255426,each,0.1
+Processed Foods,Hash Brown/Fried Potatoes,1.8,3.968316,each,0.1
+Seafood,Herring,0.95,2.094389,each,0.1
+Seafood,"Herring, filleted",0.56,1.2345872,each,0.1
+Processed Foods,Ice Cream,0.83,1.8298346,each,0.1
+Seafood,Industrial Fish,0.51,1.1243562,each,0.1
+Meat/Poultry,"Lamb Meat, ration-fed",11.31,24.9342522,each,0.1
+Vegetables,Lemongrass,0.03,0.0661386,each,0.1
+Fruits/Berries,"Lemons, Lisbon Variety",0.04,0.0881848,each,0.1
+Beans/Pulses,Lentils,0.24,0.5291088,each,0.1
+Vegetables,"Lettuce, crisp-head",0.06,0.1322772,each,0.1
+Vegetables,"Lettuce, greenhouse",4.46,9.8326052,each,0.1
+Vegetables,"Lettuce, Iceberg",0.09,0.1984158,each,0.1
+Vegetables,"Lettuce, Leaf, organic",0.12,0.2645544,each,0.1
+Vegetables,"Lettuce, loose-leaf ",0.04,0.0881848,each,0.1
+Vegetables,"Lettuce, Romaine Hearts",0.42,0.9259404,each,0.1
+Processed Foods,Liquid Eggs,0.98,2.1605276,each,0.1
+Processed Foods,Macaroni/Spaghetti/Pasta,0.56,1.2345872,each,0.1
+Seafood,Mackerel,0.52,1.1464024,each,0.1
+Seafood,"Mackerel, filleted",0.87,1.9180194,each,0.1
+Seafood,"Malaysian Shrimp/Prawn, farmed",1.94,4.2769628,each,0.1
+Processed Foods,Malt Whisky,1.24,2.7337288,each,0.1
+Processed Foods,Malted Barley,0.39,0.8598018,each,0.1
+Fruits/Berries,"Mandarin Oranges, Satsuma",0.1,0.220462,each,0.1
+Fruits/Berries,"Mango, organic",0.03,0.0661386,each,0.1
+Processed Foods,Margarine,0.8,1.763696,each,0.1
+Processed Foods,Marinara Sauce,0.38,0.8377556,each,0.1
+Processed Foods,Mashed Potato Flakes,2.05,4.519471,each,0.1
+Processed Foods,Mashed Potato Granules,1.96,4.3210552,each,0.1
+Processed Foods,Medium White Wine,0.2,0.440924,each,0.1
+Fruits/Berries,"Melons, cantaloupe/watermelon/honeydew/specialty",0.06,0.1322772,each,0.1
+Dairy,"Milk, evaporated",1.14,2.5132668,each,0.1
+Dairy,"Milk, powdered",4.42,9.7444204,each,0.1
+Dairy,"Milk, processed, 2% MF",0.36,0.7936632,each,0.1
+Dairy,"Milk, whole, raw",0.46,1.0141252,each,0.1
+Dairy,"Milk, whole, raw",0.46,1.0141252,each,0.1
+Seafood,"Mullet, , farmed",2.41,5.3131342,each,0.1
+Vegetables,"Mushrooms, Portabella/Button",0,0,each,0.1
+Seafood,"Mussels, farmed",0.24,0.5291088,each,0.1
+Fruits/Berries,Nectarines,0.1,0.220462,each,0.1
+Processed Foods,New Red Wine,0.2,0.440924,each,0.1
+Seafood,Norway Lobster,2.44,5.3792728,each,0.1
+Processed Foods,Oat Bran,0.22,0.4850164,each,0.1
+Processed Foods,Oatmeal (rolled oat flakes),0.22,0.4850164,each,0.1
+Grains,Oats,0.14,0.3086468,each,0.1
+Vegetables,Okra,0.11,0.2425082,each,0.1
+Fruits/Berries,"Olives, Arbequena",0.13,0.2866006,each,0.1
+Fruits/Berries,"Olives, Manzanillo",0.09,0.1984158,each,0.1
+Root Crops,Onions,0.13,0.2866006,each,0.1
+Vegetables,Onions,0.04,0.0881848,each,0.1
+Root Crops,"Onions, Red (Early Red Burger Variety)",0.12,0.2645544,each,0.1
+Processed Foods,Orange Juice,0.97,2.1384814,each,0.1
+Fruits/Berries,"Oranges, Blood Oranges",0.08,0.1763696,each,0.1
+Fruits/Berries,"Oranges, Minneola (Tangelo)",0.06,0.1322772,each,0.1
+Fruits/Berries,"Oranges, Navel/Valencias",0.06,0.1322772,each,0.1
+Fruits/Berries,"Oranges, Valencia",0.66,1.4550492,each,0.1
+Seafood,"Oyster, farmed",5.19,11.4419778,each,0.1
+Fruits/Berries,Palm Fruit,0.03,0.0661386,each,0.1
+Oils,Palm Kernel Oil,0.41,0.9038942,each,0.1
+Nuts/Seeds,Palm Kernels,0.15,0.330693,each,0.1
+Oils,Palm Oil,0.2,0.440924,each,0.1
+Vegetables,Parsley,0.07,0.1543234,each,0.1
+Processed Foods,Partially Hydrogenated Vegetable Oil,0.81,1.7857422,each,0.1
+Processed Foods,Pastry Flour,0.24,0.5291088,each,0.1
+Fruits/Berries,Peaches,0.1,0.220462,each,0.1
+Processed Foods,Peanut Butter,0.69,1.5211878,each,0.1
+Oils,Peanut Oil,1.77,3.9021774,each,0.1
+Root Crops,Peanuts,0.26,0.5732012,each,0.1
+Fruits/Berries,"Pears, Green Bartlett",0.15,0.330693,each,0.1
+Fruits/Berries,"Pears, Specialty Pears",0.06,0.1322772,each,0.1
+Vegetables,"Peas, Spring Peas",0.13,0.2866006,each,0.1
+Nuts/Seeds,Pecans,0.73,1.6093726,each,0.1
+Herbs,"Peppermint, Black Mitchum Variety",20.42,45.0183404,each,0.1
+Processed Foods,Pepperoni,5.93,13.0733966,each,0.1
+Vegetables,"Peppers, Bell",0.12,0.2645544,each,0.1
+Fruits/Berries,Pineapple,0.04,0.0881848,each,0.1
+Fruits/Berries,"Pineapple, organic",0.04,0.0881848,each,0.1
+Nuts/Seeds,Pistachios,0.51,1.1243562,each,0.1
+Processed Foods,Pita Bread,0.38,0.8377556,each,0.1
+Processed Foods,Pizza Dough,0.33,0.7275246,each,0.1
+Fruits/Berries,Plums,0.1,0.220462,each,0.1
+Fruits/Berries,Pomegranates,0.2,0.440924,each,0.1
+Meat/Poultry,"Pork Meat, full confinement",2.48,5.4674576,each,0.1
+Meat/Poultry,"Pork Meat, pasture access",2.77,6.1067974,each,0.1
+Processed Foods,Potato Chips,1.56,3.4392072,each,0.1
+Tubers,Potatoes,0.15,0.330693,each,0.1
+Tubers,"Potatoes, Russet Burbank",0.15,0.330693,each,0.1
+Processed Foods,Premium Red Wine,0.19,0.4188778,each,0.1
+Processed Foods,Premium White Wine,0.2,0.440924,each,0.1
+Fruits/Berries,"Prunes (dried plums), French Variety",0.23,0.5070626,each,0.1
+Fruits/Berries,Pummelos (specialty citrus fruit),0.1,0.220462,each,0.1
+Vegetables,Pumpkins,0.07,0.1543234,each,0.1
+Nuts/Seeds,"Rape Seed, summer rape",0.4,0.881848,each,0.1
+Nuts/Seeds,"Rape Seed, winter rape",0.26,0.5732012,each,0.1
+Oils,Rapeseed/Canola Oil,0.77,1.6975574,each,0.1
+Fruits/Berries,Raspberries,0.12,0.2645544,each,0.1
+Grains,"Rice, bran",0.21,0.4629702,each,0.1
+Grains,"Rice, bran",0.21,0.4629702,each,0.1
+Grains,"Rice, brown",0.98,2.1605276,each,0.1
+Grains,"Rice, raw",0.69,1.5211878,each,0.1
+Grains,"Rice, white",1.07,2.3589434,each,0.1
+Grains,"Rice, wild , brown",5.06,11.1553772,each,0.1
+Grains,"Rice, wild, bran",1.08,2.3809896,each,0.1
+Grains,"Rice, wild, raw",3.96,8.7302952,each,0.1
+Grains,"Rice, wild, white",5.51,12.1474562,each,0.1
+Grains,Rye,0.11,0.2425082,each,0.1
+Grains,"Rye, organic",0.2,0.440924,each,0.1
+Processed Foods,Salt,0.1,0.220462,each,0.1
+Processed Foods,Sausages,4.25,9.369635,each,0.1
+Seafood,"Sea Bass, farmed",2.38,5.2469956,each,0.1
+Seafood,"Sea Bass, farmed, filleted",4.73,10.4278526,each,0.1
+Seafood,"Shrimp, farmed",3.2,7.054784,each,0.1
+Seafood,Shrimp/Prawn,2.08,4.5856096,each,0.1
+Seafood,Silver Carp,2.41,5.3131342,each,0.1
+Seafood,"Silver Carp, farmed, filleted",4.34,9.5680508,each,0.1
+Processed Foods,Soft Drinks,0.78,1.7196036,each,0.1
+Processed Foods,Solid Shortening,0.82,1.8077884,each,0.1
+Grains,Sorghum,0.13,0.2866006,each,0.1
+Processed Foods,Soybean Meal,0.3,0.661386,each,0.1
+Oils,Soybean Oil,0.67,1.4770954,each,0.1
+Beans/Pulses,Soybeans,0.25,0.551155,each,0.1
+Beans/Pulses,"Soybeans, Clark Variety",0.19,0.4188778,each,0.1
+Beans/Pulses,"Soybeans, organic",0.26,0.5732012,each,0.1
+Processed Foods,Soymilk,0.31,0.6834322,each,0.1
+Processed Foods,"Soymilk, organic",0.31,0.6834322,each,0.1
+Vegetables,Spinach,0.15,0.330693,each,0.1
+Processed Foods,Sponge Cake,0.47,1.0361714,each,0.1
+Vegetables,"Squash, Summer Squash",0.16,0.3527392,each,0.1
+Vegetables,"Squash, winter Squash",0.14,0.3086468,each,0.1
+Fruits/Berries,Strawberries,0.12,0.2645544,each,0.1
+Fruits/Berries,"Strawberries, organic",0.11,0.2425082,each,0.1
+Processed Foods,Sugar Cookies,0.59,1.3007258,each,0.1
+Processed Foods,"Sugar, raw cane",1.37,3.0203294,each,0.1
+Processed Foods,"Sugar, refined cane",1.79,3.9462698,each,0.1
+Miscellaneous Food Crops,Sugarcane,0.02,0.0440924,each,0.1
+Oils,Sunflower Oil,0.67,1.4770954,each,0.1
+Nuts/Seeds,Sunflower Seed,0.4,0.881848,each,0.1
+Tubers,Sweet Potatoes,0.19,0.4188778,each,0.1
+Seafood,"Tilapia, farmed",2.41,5.3131342,each,0.1
+Seafood,"Tilapia, farmed, filleted",4.79,10.5601298,each,0.1
+Processed Foods,Toasted Breakfast Cereal,0.98,2.1605276,each,0.1
+Processed Foods,Toasted Whole Wheat Breakfast Cereal,0.94,2.0723428,each,0.1
+Processed Foods,"Tofu, firm",0.32,0.7054784,each,0.1
+Processed Foods,"Tofu, firm, organic",0.31,0.6834322,each,0.1
+Processed Foods,Tomato Ketchup,1.02,2.2487124,each,0.1
+Processed Foods,Tomato Paste,0.83,1.8298346,each,0.1
+Vegetables,Tomatoes,0.11,0.2425082,each,0.1
+Vegetables,"Tomatoes, Cherry",0.03,0.0661386,each,0.1
+Vegetables,"Tomatoes, organic",0.15,0.330693,each,0.1
+Seafood,"Trout, farmed",1.14,2.5132668,each,0.1
+Seafood,"Trout, freshwater, farmed, filleted",2.01,4.4312862,each,0.1
+Seafood,Tuna (Skipjack and Yellofin),0.9,1.984158,each,0.1
+Seafood,"Tuna, cooked, for canning",1.85,4.078547,each,0.1
+Seafood,"Tuna, filleted",1.56,3.4392072,each,0.1
+Meat/Poultry,"Turkey Meat (Hens), small-scale, confinement",2.12,4.6737944,each,0.1
+Meat/Poultry,"Turkey Meat (Toms), small-scale, confinement",2.05,4.519471,each,0.1
+Processed Foods,Untoasted Breakfast Cereal,0.7,1.543234,each,0.1
+Processed Foods,Untoasted Whole Wheat Breakfast Cereal,0.66,1.4550492,each,0.1
+Nuts/Seeds,"Walnuts,  conventional (micro-sprinkler irrig.)",0.35,0.771617,each,0.1
+Nuts/Seeds,"Walnuts, Chandler Variety",0.22,0.4850164,each,0.1
+Nuts/Seeds,"Walnuts, English Variety",0.41,0.9038942,each,0.1
+Processed Foods,Wheat Bran,0.25,0.551155,each,0.1
+Processed Foods,Wheat Bread,0.38,0.8377556,each,0.1
+Processed Foods,Wheat Bread Rolls,0.38,0.8377556,each,0.1
+Processed Foods,Wheat Germ,0.25,0.551155,each,0.1
+Grains,"Wheat, Hard Red Spring Wheat",0.16,0.3527392,each,0.1
+Grains,"Wheat, Hard White Spring Wheat",0.15,0.330693,each,0.1
+Grains,"Wheat, Soft White Spring Wheat",0.14,0.3086468,each,0.1
+Grains,"Wheat, Soft White Winter Wheat",0.14,0.3086468,each,0.1
+Grains,"Wheat, Spring Wheat",0.12,0.2645544,each,0.1
+Grains,"Wheat, winter Wheat",0.1,0.220462,each,0.1
+Dairy,"Whey, dry, natural",0.92,2.0282504,each,0.1
+Processed Foods,Whole Wheat Bread,0.38,0.8377556,each,0.1
+Processed Foods,Whole Wheat Bread Rolls,0.38,0.8377556,each,0.1
+Processed Foods,Whole Wheat Flour,0.25,0.551155,each,0.1
+Processed Foods,Whole Wheat Macaroni/Spaghetti/Pasta,0.48,1.0582176,each,0.1
+Processed Foods,Wine,0.29,0.6393398,each,0.1
+Grains,Yellow Mustard,0.45,0.992079,each,0.1
+Dairy,Yogurt,0.41,0.9038942,each,0.1
