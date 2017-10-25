@@ -17,14 +17,13 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
 
     @IBOutlet weak var addIngredientTableView: UITableView!
     
-    @IBOutlet weak var searchBarView: UIView!
+    @IBOutlet weak var customNav: UIView!
+    //@IBOutlet weak var searchBarView: UIView!
     var recipe: Recipe?
     
     private let segueSelectIngredient = "SelectIngredientSegue"
     
     private let searchController = UISearchController(searchResultsController: nil)
-    
-    var customSearchController: AddIngredientSearchController!
     
     //create an array to store the data and the filtered data
     var ingredientsArray = [IngredientClass]()
@@ -65,11 +64,11 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         definesPresentationContext = true
         searchController.searchBar.delegate = self
         //searchBarView.addSubview(searchController.searchBar)
-        searchController.searchBar.sizeToFit()
-        
+        //searchController.searchBar.sizeToFit()
+        let searchControllerSubView = searchController.searchBar
+        searchControllerSubView.frame = CGRect(x: 10, y: 10, width: customNav.frame.width, height: customNav.frame.height)
+        customNav.addSubview(searchController.searchBar)
         //addIngredientTableView.tableHeaderView = searchController.searchBar
-        
-        configureCustomSearchController()
         
     }
     
@@ -155,14 +154,8 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         return 50
     }
     
-    func configureCustomSearchController() {
-        customSearchController = AddIngredientSearchController(searchResultsController: self, searchBarFrame: CGRect(x:0.0, y:0.0, width:addIngredientTableView.frame.size.width, height: 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orange, searchBarTintColor: UIColor.black)
-        
-        customSearchController.customSearchBar.placeholder = "Search in this awesome bar..."
-        addIngredientTableView.tableHeaderView = customSearchController.customSearchBar
-        
-        customSearchController.delegate = self
-        
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        searchController.searchBar.endEditing(true)
     }
     
 }
@@ -178,7 +171,8 @@ extension AddIngredientVC: UISearchResultsUpdating {
 //MARK: - Search Bar Delegate Functions
     
 //    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//        self.searchBarView.endEditing(true)
+//        self.search.endEditing(true)
+//        searchbar
 //    }
     
 //    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {

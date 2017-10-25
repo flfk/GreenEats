@@ -931,8 +931,7 @@ This data set sourced from CleanMetrics. For further information on or to get ac
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aZg-6c-rHb">
                                 <rect key="frame" x="0.0" y="70" width="320" height="498"/>
-                                <color key="backgroundColor" red="0.96862745098039216" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddIngredientCell" rowHeight="51" id="MBi-M6-M32" customClass="AddIngredientCell" customModule="GreenEats" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="51"/>
@@ -987,6 +986,7 @@ This data set sourced from CleanMetrics. For further information on or to get ac
                     </view>
                     <connections>
                         <outlet property="addIngredientTableView" destination="aZg-6c-rHb" id="b7Z-Y5-YXv"/>
+                        <outlet property="customNav" destination="vXr-TL-HXN" id="LsA-4L-i7c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eB6-SA-6UM" userLabel="First Responder" sceneMemberID="firstResponder"/>
