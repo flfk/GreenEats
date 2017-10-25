@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4415E2C31FA0620C0037AC0A /* AddIngredientSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415E2C21FA0620C0037AC0A /* AddIngredientSearchBar.swift */; };
+		4415E2C51FA065890037AC0A /* AddIngredientSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415E2C41FA065890037AC0A /* AddIngredientSearchController.swift */; };
 		447D1B9F1F25519A005F7C3F /* IngredientClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D1B9E1F25519A005F7C3F /* IngredientClass.swift */; };
 		447D1BA11F2C785F005F7C3F /* IngredientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447D1BA01F2C785F005F7C3F /* IngredientData.swift */; };
 		44F188CE1F5AAFD500E51D5C /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F188CD1F5AAFD500E51D5C /* AboutVC.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4415E2C21FA0620C0037AC0A /* AddIngredientSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientSearchBar.swift; sourceTree = "<group>"; };
+		4415E2C41FA065890037AC0A /* AddIngredientSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientSearchController.swift; sourceTree = "<group>"; };
 		447D1B9E1F25519A005F7C3F /* IngredientClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientClass.swift; sourceTree = "<group>"; };
 		447D1BA01F2C785F005F7C3F /* IngredientData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientData.swift; sourceTree = "<group>"; };
 		44F188CD1F5AAFD500E51D5C /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 			children = (
 				44FE534B1F233D9F00C5296F /* Main.storyboard */,
 				44FE53501F233D9F00C5296F /* LaunchScreen.storyboard */,
+				4415E2C21FA0620C0037AC0A /* AddIngredientSearchBar.swift */,
+				4415E2C41FA065890037AC0A /* AddIngredientSearchController.swift */,
 			);
 			name = View;
 			path = ..;
@@ -214,8 +220,10 @@
 				44F188CE1F5AAFD500E51D5C /* AboutVC.swift in Sources */,
 				44FE534A1F233D9F00C5296F /* MainVC.swift in Sources */,
 				44FE53481F233D9F00C5296F /* AppDelegate.swift in Sources */,
+				4415E2C51FA065890037AC0A /* AddIngredientSearchController.swift in Sources */,
 				447D1B9F1F25519A005F7C3F /* IngredientClass.swift in Sources */,
 				44FE53621F24298700C5296F /* AddRecipeVC.swift in Sources */,
+				4415E2C31FA0620C0037AC0A /* AddIngredientSearchBar.swift in Sources */,
 				447D1BA11F2C785F005F7C3F /* IngredientData.swift in Sources */,
 				44FE53601F23529B00C5296F /* Recipes.xcdatamodeld in Sources */,
 				44FE53671F2429B500C5296F /* SelectIngredientVC.swift in Sources */,

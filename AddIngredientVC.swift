@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 
 //add protocols for tableview data source and delegate
-class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     //MARK: - Properties
 
@@ -23,6 +23,8 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     private let segueSelectIngredient = "SelectIngredientSegue"
     
     private let searchController = UISearchController(searchResultsController: nil)
+    
+    var customSearchController: AddIngredientSearchController!
     
     //create an array to store the data and the filtered data
     var ingredientsArray = [IngredientClass]()
@@ -40,9 +42,15 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         let darkGreyColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1.0)
         searchController.searchBar.barTintColor = greyColor
         searchController.searchBar.tintColor = darkGreyColor
-        //searchController.searchBar.layer.borderColor = UIColor.clear.cgColor
-        //searchController.searchBar.backgroundImage = UIImage(named: "searchBarBackground")
-        searchController.searchBar.backgroundImage = UIImage()
+        //searchController.searchBar.backgroundImage = UIImage()
+        searchController.searchBar.backgroundImage = UIImage(named: "searchBarBackground")
+        //searchbar height changed from 44 to 64 pixels
+//        let screenSize: CGRect = UIScreen.main.bounds
+//        if #available(iOS 11.0, *) {
+//            searchBarView.frame = CGRect(x: 0, y: 70, width: screenSize.width, height: 64)
+//        } else {
+//            searchBarView.frame = CGRect(x: 0, y: 70, width: screenSize.width, height: 44)
+//        }
 
         //set delegate and datasource as self
         addIngredientTableView.dataSource = self
@@ -55,8 +63,13 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
-        searchBarView.addSubview(searchController.searchBar)
-
+        searchController.searchBar.delegate = self
+        //searchBarView.addSubview(searchController.searchBar)
+        searchController.searchBar.sizeToFit()
+        
+        //addIngredientTableView.tableHeaderView = searchController.searchBar
+        
+        configureCustomSearchController()
         
     }
     
@@ -142,6 +155,16 @@ class AddIngredientVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         return 50
     }
     
+    func configureCustomSearchController() {
+        customSearchController = AddIngredientSearchController(searchResultsController: self, searchBarFrame: CGRect(x:0.0, y:0.0, width:addIngredientTableView.frame.size.width, height: 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orange, searchBarTintColor: UIColor.black)
+        
+        customSearchController.customSearchBar.placeholder = "Search in this awesome bar..."
+        addIngredientTableView.tableHeaderView = customSearchController.customSearchBar
+        
+        customSearchController.delegate = self
+        
+    }
+    
 }
 
 //MARK: - UISearchControllerUpdating
@@ -152,4 +175,18 @@ extension AddIngredientVC: UISearchResultsUpdating {
         filterContentForSearchText(searchController.searchBar.text!)
     }
     
+//MARK: - Search Bar Delegate Functions
+    
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        self.searchBarView.endEditing(true)
+//    }
+    
+//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+//        self.addIngredientTableView.isScrollEnabled = false
+//        self.searchBarView.endEditing(true)
+//    }
+//    
+//    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+//        self.addIngredientTableView.isScrollEnabled = true
+//    }
 }

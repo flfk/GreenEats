@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xEA-MB-KOd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xEA-MB-KOd">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccA-kb-KhQ" userLabel="customNavView">
-                                <rect key="frame" x="0.0" y="24" width="320" height="90"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-4j-ywt">
                                         <rect key="frame" x="112" y="33" width="96" height="21"/>
@@ -120,14 +120,14 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VZR-dz-Eka">
-                                <rect key="frame" x="0.0" y="114" width="320" height="454"/>
+                                <rect key="frame" x="0.0" y="134" width="320" height="434"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="70" id="NAG-tj-rdb" customClass="RecipeCell" customModule="GreenEats" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NAG-tj-rdb" id="ef9-wH-PQO">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brocoli Salad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVf-29-arY">
@@ -338,7 +338,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-2j-vIr" userLabel="Custom Nav">
-                                <rect key="frame" x="0.0" y="24" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Recipe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ4-wo-qyW">
                                         <rect key="frame" x="110" y="35" width="100" height="20"/>
@@ -395,7 +395,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fs-OU-hBm" userLabel="Top Header">
-                                <rect key="frame" x="10" y="104" width="300" height="70"/>
+                                <rect key="frame" x="10" y="124" width="300" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2V7-Mw-6sf">
                                         <rect key="frame" x="215" y="44" width="49" height="16"/>
@@ -483,7 +483,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qML-Kd-rHg" userLabel="Rating">
-                                <rect key="frame" x="10" y="184" width="300" height="100"/>
+                                <rect key="frame" x="10" y="204" width="300" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vf-rG-FMy">
                                         <rect key="frame" x="150" y="20" width="145" height="40"/>
@@ -525,7 +525,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiE-FH-aVU" userLabel="Ingredients">
-                                <rect key="frame" x="10" y="294" width="300" height="264"/>
+                                <rect key="frame" x="10" y="314" width="300" height="244"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INGREDIENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIg-Es-zdz">
                                         <rect key="frame" x="10" y="15" width="100" height="20"/>
@@ -549,14 +549,14 @@
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cE9-66-jNl">
-                                        <rect key="frame" x="0.0" y="50" width="300" height="214"/>
+                                        <rect key="frame" x="0.0" y="50" width="300" height="194"/>
                                         <color key="backgroundColor" red="0.96862745098039216" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectedIngredientCell" rowHeight="50" id="13X-GT-T5G" customClass="SelectedIngredientCell" customModule="GreenEats" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="300" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="13X-GT-T5G" id="nlH-CS-jgp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="49.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 geads (300g)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsQ-uh-LUx">
@@ -754,11 +754,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="316" id="3fN-hd-3B5"/>
                                 </constraints>
-                                <mutableString key="text">Climate change is the biggest threat our planet has ever faced.  As the primary force driving climate change, it is on us to reduce our greenhouse gas emissions to stop this threat.
+                                <string key="text">Climate change is the biggest threat our planet has ever faced.  As the primary force driving climate change, it is on us to reduce our greenhouse gas emissions to stop this threat.
 
 Between 20% and 30% of all human emissions come from our food systems. By making conscious food choices that help reduce this impact we can substantially reduce our ‘foodprint’ and help create a sustainable future for our planet.
 
-This tool aims to make it easier for you to better the sustainability of their food choices impact global sustainability so you can make more informed decisions. </mutableString>
+This tool aims to make it easier for you to better the sustainability of their food choices impact global sustainability so you can make more informed decisions. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -849,11 +849,11 @@ This tool aims to make it easier for you to better the sustainability of their f
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="mkF-y4-LQW"/>
                                 </constraints>
-                                <mutableString key="text">The underlying data asses food product’s emissions during production and processing, which account for the vast majority of food related emissions. All emissions are reported in Kg of CO2 emitted however include emissions of carbon dioxide, methane and nitrous oxide.
+                                <string key="text">The underlying data asses food product’s emissions during production and processing, which account for the vast majority of food related emissions. All emissions are reported in Kg of CO2 emitted however include emissions of carbon dioxide, methane and nitrous oxide.
 
 Please be aware that this tool is not meant to calculate carbon emissions to an n’th degree of accuracy. Rather it is meant to allow a relative comparison of different foods and recipes to help you understand what parts of your diet are driving emissions. 
 
-This data set sourced from CleanMetrics. For further information on or to get access to the underlying data please refer to www.foodemissions.com. </mutableString>
+This data set sourced from CleanMetrics. For further information on or to get access to the underlying data please refer to www.foodemissions.com. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -929,34 +929,16 @@ This data set sourced from CleanMetrics. For further information on or to get ac
                                     <constraint firstAttribute="bottom" secondItem="Eqp-MH-gwJ" secondAttribute="bottom" constant="15" id="ipN-lW-rJl"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaK-sQ-yGf" userLabel="SearchBarView">
-                                <rect key="frame" x="0.0" y="70" width="320" height="44"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tul-QE-Gn4" userLabel="Line">
-                                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
-                                        <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="UaF-uG-Fp1"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.96893805265426636" green="0.95397776365280151" blue="0.95349234342575073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="N4M-qQ-4Xs"/>
-                                    <constraint firstItem="tul-QE-Gn4" firstAttribute="leading" secondItem="qaK-sQ-yGf" secondAttribute="leading" id="YHb-Kz-ksU"/>
-                                    <constraint firstAttribute="trailing" secondItem="tul-QE-Gn4" secondAttribute="trailing" id="uHB-VW-loq"/>
-                                    <constraint firstAttribute="bottom" secondItem="tul-QE-Gn4" secondAttribute="bottom" id="v7T-sj-N6T"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aZg-6c-rHb">
-                                <rect key="frame" x="0.0" y="114" width="320" height="454"/>
+                                <rect key="frame" x="0.0" y="70" width="320" height="498"/>
                                 <color key="backgroundColor" red="0.96862745098039216" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddIngredientCell" rowHeight="51" id="MBi-M6-M32" customClass="AddIngredientCell" customModule="GreenEats" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MBi-M6-M32" id="Eda-bo-aCL">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brocoli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zO1-md-tgH">
@@ -995,20 +977,16 @@ This data set sourced from CleanMetrics. For further information on or to get ac
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aZg-6c-rHb" firstAttribute="leading" secondItem="H0h-OR-Zfh" secondAttribute="leading" id="0il-7e-JIq"/>
-                            <constraint firstAttribute="trailing" secondItem="qaK-sQ-yGf" secondAttribute="trailing" id="0oL-qj-lPY"/>
                             <constraint firstItem="vXr-TL-HXN" firstAttribute="leading" secondItem="H0h-OR-Zfh" secondAttribute="leading" id="Ato-XB-MpM"/>
+                            <constraint firstItem="aZg-6c-rHb" firstAttribute="top" secondItem="vXr-TL-HXN" secondAttribute="bottom" id="OBh-yD-jgf"/>
                             <constraint firstItem="vXr-TL-HXN" firstAttribute="top" secondItem="H0h-OR-Zfh" secondAttribute="top" constant="-20" id="fTo-t6-2eU"/>
-                            <constraint firstItem="qaK-sQ-yGf" firstAttribute="top" secondItem="vXr-TL-HXN" secondAttribute="bottom" id="ffI-vi-w10"/>
-                            <constraint firstItem="aZg-6c-rHb" firstAttribute="top" secondItem="qaK-sQ-yGf" secondAttribute="bottom" id="i9G-1O-X0o"/>
                             <constraint firstAttribute="trailing" secondItem="vXr-TL-HXN" secondAttribute="trailing" id="kAL-77-i3y"/>
-                            <constraint firstItem="qaK-sQ-yGf" firstAttribute="leading" secondItem="H0h-OR-Zfh" secondAttribute="leading" id="pbI-Po-qSc"/>
                             <constraint firstAttribute="trailing" secondItem="aZg-6c-rHb" secondAttribute="trailing" id="uDV-Cc-Adx"/>
                             <constraint firstItem="dcb-BL-jsv" firstAttribute="top" secondItem="aZg-6c-rHb" secondAttribute="bottom" id="xcI-v7-iJd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addIngredientTableView" destination="aZg-6c-rHb" id="b7Z-Y5-YXv"/>
-                        <outlet property="searchBarView" destination="qaK-sQ-yGf" id="Ygc-Bm-7WO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eB6-SA-6UM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1202,7 +1180,7 @@ This data set sourced from CleanMetrics. For further information on or to get ac
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xEA-MB-KOd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="IFP-fQ-Zhh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

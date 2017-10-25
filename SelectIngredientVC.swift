@@ -285,9 +285,6 @@ class SelectIngredientVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             ]
         }
         
-        
-        
-        
     }
 
 }
