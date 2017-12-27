@@ -290,7 +290,7 @@ class AddRecipeVC: UIViewController, UITableViewDelegate, UITableViewDataSource,
         
         //configure cell contents
         cell.ingredientNameLbl.text = ingredient.name
-        let roundedIngredientQuantity = (ingredient.quantity * 10).rounded() / 10
+        let roundedIngredientQuantity = Int(ingredient.quantity)
         cell.ingredientQuantityLbl.text = "\(roundedIngredientQuantity)" + " " + "\(ingredient.quantityName!)"
         let roundedEmissions = Int(ingredient.emissions)
         cell.ingredientEmissionsLbl.text = "\(roundedEmissions)"
