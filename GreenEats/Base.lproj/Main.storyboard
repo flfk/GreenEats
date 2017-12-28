@@ -758,7 +758,7 @@
  
 The food we eat is one of these areas. Food related emissions make up around 18% of annual global greenhouse gas emissions.
 
-GreenEats gives you the ability to explore the emissions required to produce each of your meals. You can then explore how different recipes and ingredients contribute to your environmental footprint.
+Green Eats gives you the ability to explore the emissions required to produce each of your meals. You can then explore how different recipes and ingredients contribute to your environmental footprint.
 
 Our aim is to give you the information you need to make your own choices.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -855,7 +855,7 @@ Our aim is to give you the information you need to make your own choices.</mutab
 
 All emissions are reported in Kg of CO2 emitted however include emissions of carbon dioxide, methane and nitrous oxide.
 
-Please note that Green Eats isn’t trying to calculate extremly precise figures. Given the variability in food systems globally this would be overly complex. Instead, we hope to give you a sense of the different large scale impact of different foods.
+Please note that Green Eats isn’t trying to calculate highly precise figures. Given the variability in food systems globally this would be overly complex. Instead, we hope to give you a sense of the different large scale impact of different foods.
 
 This data set sourced from CleanMetrics. For further information on or to get access to the underlying data please refer to www.foodemissions.com.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
